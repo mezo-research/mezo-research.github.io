@@ -5,4 +5,4 @@ This site hosts publicly accessible examples of output reports from Mezo adaptiv
 
 #### Victorian Rock Lobster Project [Victorian Fisheries Authority](https://vfa.vic.gov.au/)
 
-2. Stock Status Data Report [June 2017](http://public.mezo.com.au/vrl/201706)
+1. Stock Status Data Report [June 2017](http://public.mezo.com.au/vrl/201706)
