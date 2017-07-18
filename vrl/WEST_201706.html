@@ -31,6 +31,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="assets/js/plotly-latest.min.js"></script>
   <script src="assets/js/flowReport.js"></script>
+
+  <script type="text/javascript" src="assets/js/jquery.csv.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="assets/js/dataTables.bootstrap.js"></script>
+  <script type="text/javascript" src="assets/js/csv_to_html_table.js"></script>
 </head>
 
 <!--<body data-spy="scroll" data-target="#subnav" data-offset="40">-->
@@ -68,7 +73,7 @@
         <div class="control-row">
           Plot variable: <select id="map-pane-selector"></select> </br></br>
         </div>
-        <div id="elid_0" style="height: 450px; width: 960px;" class="plotly-graph-div">
+        <!-- <div id="elid_0" style="height: 450px; width: 960px;" class="plotly-graph-div"> -->
           <div id="map-pane" style="height: 450px; width: 960px;"></div>
           <script type="text/javascript">
             function getColor(d, divs) {
@@ -212,7 +217,7 @@
             legend.addTo(map);
           };
         </script>
-      </div>
+      <!-- </div> -->
       <p><br>Spatial breakdown of key fishery statistics in the 2015/16 fishing season. Selectable as total commercial catch, fishing effort or standardised CPUE. Colour shading is weighted relative to each indicator. Top right hand box displays detailed information.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
@@ -272,6 +277,23 @@
 
 </div>
 <p><br>Total annual catch (tonnes) in the Rock Lobster Western Zone fishery from 1978/79 to present, displayed by fishing season (Nov-Sept). TAC was introduced to the fishery in 2001/02.<br></p>
+
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
+  <h3 class="hr-divider-content hr-divider-heading">
+    Historical TAC Data
+  </h3>
+</div>
+<div id="table_TAC" style="width: 960px;">
+  <script type="text/javascript">
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/WEST_TAC_table.csv',
+      element: 'table_TAC',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 0, "asc" ]]}
+    });
+  </script>
+</div>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
   <h3 class="hr-divider-content hr-divider-heading">
@@ -517,7 +539,7 @@ function updatePlot_elid_3(){
       if (sex == "F") {
         ref_value = 105;
       } else {
-        ref_value = 100;
+        ref_value = 110;
       }
       var return_shapes = [{
         type: 'line',
@@ -955,15 +977,16 @@ function updatePlot_elid_3(){
           data.push(trace);
         }
         var reference_shapes = [];
+        var ref_tac = 209217;
         if (current_variable_elid_1 == "Catch (cum)") {
           reference_shapes = [{
             type: 'line',
             xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
             yref: 'y',  // y-reference is assigned to the y-values
             x0: 0,
-            y0: 209217,
+            y0: ref_tac,
             x1: 1,
-            y1: 209217,
+            y1: ref_tac,
             line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
           }];
         }
@@ -1373,7 +1396,7 @@ function updatePlot_elid_3(){
       data = [trace1, trace2];
       layout = {
         xaxis: { title: ''},
-        yaxis: { title: 'Est biomass (t)', rangemode: 'tozero'},
+        yaxis: { title: 'Est biomass (kg)', rangemode: 'tozero'},
         yaxis2: { title: "Exploitation (Proportion of biomass)",
           rangemode: "tozero",
           overlaying: "y",
