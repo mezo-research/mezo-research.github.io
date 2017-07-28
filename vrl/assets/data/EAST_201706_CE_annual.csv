@@ -1,153 +1,153 @@
-year,display_year,region,fleet,species,catch,effort
-1978,1978/79,All Regions,Pot,Lobster,143754,203629
-1979,1979/80,All Regions,Pot,Lobster,121535,174170
-1980,1980/81,All Regions,Pot,Lobster,140505,194288
-1981,1981/82,All Regions,Pot,Lobster,134943,203566
-1982,1982/83,All Regions,Pot,Lobster,147095,227574
-1983,1983/84,All Regions,Pot,Lobster,131736,233991
-1984,1984/85,All Regions,Pot,Lobster,110083,206384
-1985,1985/86,All Regions,Pot,Lobster,96229,185699
-1986,1986/87,All Regions,Pot,Lobster,81149,154057
-1987,1987/88,All Regions,Pot,Lobster,72957,134077
-1988,1988/89,All Regions,Pot,Lobster,72854,167151
-1989,1989/90,All Regions,Pot,Lobster,97402,225195.5
-1990,1990/91,All Regions,Pot,Lobster,79679,183388
-1991,1991/92,All Regions,Pot,Lobster,68121,182448
-1992,1992/93,All Regions,Pot,Lobster,73346,238035
-1993,1993/94,All Regions,Pot,Lobster,81681,270110
-1994,1994/95,All Regions,Pot,Lobster,73251,257795
-1995,1995/96,All Regions,Pot,Lobster,58176,224141
-1996,1996/97,All Regions,Pot,Lobster,59975,222272.11
-1997,1997/98,All Regions,Pot,Lobster,67045,223099
-1998,1998/99,All Regions,Pot,Lobster,67430,219910
-1999,1999/00,All Regions,Pot,Lobster,74773,232025
-2000,2000/01,All Regions,Pot,Lobster,72809,219338
-2001,2001/02,All Regions,Pot,Lobster,53532,151123
-2002,2002/03,All Regions,Pot,Lobster,52537,134208
-2003,2003/04,All Regions,Pot,Lobster,55652,132567
-2004,2004/05,All Regions,Pot,Lobster,54897,136181
-2005,2005/06,All Regions,Pot,Lobster,52424,122283
-2006,2006/07,All Regions,Pot,Lobster,53952,135526
-2007,2007/08,All Regions,Pot,Lobster,46089,122776
-2008,2008/09,All Regions,Pot,Lobster,39573,107755
-2009,2009/10,All Regions,Pot,Lobster,55338,145877
-2010,2010/11,All Regions,Pot,Lobster,65793,150422
-2011,2011/12,All Regions,Pot,Lobster,61717,113610
-2012,2012/13,All Regions,Pot,Lobster,48078,93876
-2013,2013/14,All Regions,Pot,Lobster,58899,113972
-2014,2014/15,All Regions,Pot,Lobster,57500,109654
-2015,2015/16,All Regions,Pot,Lobster,46409,108689
-1978,1978/79,Lakes Entrance,Pot,Lobster,33455,29358
-1979,1979/80,Lakes Entrance,Pot,Lobster,17245,14712
-1980,1980/81,Lakes Entrance,Pot,Lobster,18913,14077
-1981,1981/82,Lakes Entrance,Pot,Lobster,18024,14438
-1982,1982/83,Lakes Entrance,Pot,Lobster,11901,7009
-1983,1983/84,Lakes Entrance,Pot,Lobster,11093,7797
-1984,1984/85,Lakes Entrance,Pot,Lobster,18596,12316
-1985,1985/86,Lakes Entrance,Pot,Lobster,19636,12965
-1986,1986/87,Lakes Entrance,Pot,Lobster,12655,7824
-1987,1987/88,Lakes Entrance,Pot,Lobster,14498,9688
-1988,1988/89,Lakes Entrance,Pot,Lobster,17720,15371
-1989,1989/90,Lakes Entrance,Pot,Lobster,15408,15778
-1990,1990/91,Lakes Entrance,Pot,Lobster,12969,11506
-1991,1991/92,Lakes Entrance,Pot,Lobster,5921,7545
-1992,1992/93,Lakes Entrance,Pot,Lobster,7624,11692
-1993,1993/94,Lakes Entrance,Pot,Lobster,7422,12189
-1994,1994/95,Lakes Entrance,Pot,Lobster,12729,21546
-1995,1995/96,Lakes Entrance,Pot,Lobster,6124,12303
-1996,1996/97,Lakes Entrance,Pot,Lobster,12360,18944.11
-1997,1997/98,Lakes Entrance,Pot,Lobster,11637,17438
-1998,1998/99,Lakes Entrance,Pot,Lobster,9834,17341
-1999,1999/00,Lakes Entrance,Pot,Lobster,7502,15065
-2000,2000/01,Lakes Entrance,Pot,Lobster,9644,16538
-2001,2001/02,Lakes Entrance,Pot,Lobster,3840,6769
-2002,2002/03,Lakes Entrance,Pot,Lobster,4953,6504
-2003,2003/04,Lakes Entrance,Pot,Lobster,3119,4640
-2004,2004/05,Lakes Entrance,Pot,Lobster,4105,5416
-2005,2005/06,Lakes Entrance,Pot,Lobster,2166,2867
-2006,2006/07,Lakes Entrance,Pot,Lobster,2490,4382
-2007,2007/08,Lakes Entrance,Pot,Lobster,1848,3537
-2008,2008/09,Lakes Entrance,Pot,Lobster,1291,1942
-2009,2009/10,Lakes Entrance,Pot,Lobster,1342,1956
-2010,2010/11,Lakes Entrance,Pot,Lobster,2621,12811
-2011,2011/12,Lakes Entrance,Pot,Lobster,1524,3566
-2012,2012/13,Lakes Entrance,Pot,Lobster,1085,2344
-2013,2013/14,Lakes Entrance,Pot,Lobster,1973,3673
-2014,2014/15,Lakes Entrance,Pot,Lobster,2498,4176
-2015,2015/16,Lakes Entrance,Pot,Lobster,2040,3006
-1978,1978/79,San Remo,Pot,Lobster,43476,69829
-1979,1979/80,San Remo,Pot,Lobster,37379,61437
-1980,1980/81,San Remo,Pot,Lobster,49145,73824
-1981,1981/82,San Remo,Pot,Lobster,54251,74064
-1982,1982/83,San Remo,Pot,Lobster,62282,87854
-1983,1983/84,San Remo,Pot,Lobster,40944,76908
-1984,1984/85,San Remo,Pot,Lobster,40115,76846
-1985,1985/86,San Remo,Pot,Lobster,30907,61181
-1986,1986/87,San Remo,Pot,Lobster,26767,51775
-1987,1987/88,San Remo,Pot,Lobster,18952,42426
-1988,1988/89,San Remo,Pot,Lobster,16649,52463
-1989,1989/90,San Remo,Pot,Lobster,19831,67950
-1990,1990/91,San Remo,Pot,Lobster,18038,53011
-1991,1991/92,San Remo,Pot,Lobster,14896,45600
-1992,1992/93,San Remo,Pot,Lobster,26630,86767
-1993,1993/94,San Remo,Pot,Lobster,31733,104957
-1994,1994/95,San Remo,Pot,Lobster,28421,100200
-1995,1995/96,San Remo,Pot,Lobster,17931,68251
-1996,1996/97,San Remo,Pot,Lobster,20368,78844
-1997,1997/98,San Remo,Pot,Lobster,26351,91799
-1998,1998/99,San Remo,Pot,Lobster,24371,90320
-1999,1999/00,San Remo,Pot,Lobster,22810,87848
-2000,2000/01,San Remo,Pot,Lobster,20053,71480
-2001,2001/02,San Remo,Pot,Lobster,16307,47242
-2002,2002/03,San Remo,Pot,Lobster,13238,39404
-2003,2003/04,San Remo,Pot,Lobster,13880,34461
-2004,2004/05,San Remo,Pot,Lobster,13442,35735
-2005,2005/06,San Remo,Pot,Lobster,22652,46400
-2006,2006/07,San Remo,Pot,Lobster,20877,50399
-2007,2007/08,San Remo,Pot,Lobster,20585,51577
-2008,2008/09,San Remo,Pot,Lobster,17025,44655
-2009,2009/10,San Remo,Pot,Lobster,22368,57346
-2010,2010/11,San Remo,Pot,Lobster,27797,56957
-2011,2011/12,San Remo,Pot,Lobster,24786,39604
-2012,2012/13,San Remo,Pot,Lobster,17545,37373
-2013,2013/14,San Remo,Pot,Lobster,19197,38346
-2014,2014/15,San Remo,Pot,Lobster,15555,29752
-2015,2015/16,San Remo,Pot,Lobster,10755,32194
-1978,1978/79,Queenscliff,Pot,Lobster,66823,104442
-1979,1979/80,Queenscliff,Pot,Lobster,66911,98021
-1980,1980/81,Queenscliff,Pot,Lobster,72447,106387
-1981,1981/82,Queenscliff,Pot,Lobster,62668,115064
-1982,1982/83,Queenscliff,Pot,Lobster,72912,132711
-1983,1983/84,Queenscliff,Pot,Lobster,79699,149286
-1984,1984/85,Queenscliff,Pot,Lobster,51372,117222
-1985,1985/86,Queenscliff,Pot,Lobster,45686,111553
-1986,1986/87,Queenscliff,Pot,Lobster,41727,94458
-1987,1987/88,Queenscliff,Pot,Lobster,39507,81963
-1988,1988/89,Queenscliff,Pot,Lobster,38485,99317
-1989,1989/90,Queenscliff,Pot,Lobster,62163,141467.5
-1990,1990/91,Queenscliff,Pot,Lobster,48672,118871
-1991,1991/92,Queenscliff,Pot,Lobster,47304,129303
-1992,1992/93,Queenscliff,Pot,Lobster,39092,139576
-1993,1993/94,Queenscliff,Pot,Lobster,42526,152964
-1994,1994/95,Queenscliff,Pot,Lobster,32101,136049
-1995,1995/96,Queenscliff,Pot,Lobster,34121,143587
-1996,1996/97,Queenscliff,Pot,Lobster,27247,124484
-1997,1997/98,Queenscliff,Pot,Lobster,29057,113862
-1998,1998/99,Queenscliff,Pot,Lobster,33225,112249
-1999,1999/00,Queenscliff,Pot,Lobster,44461,129112
-2000,2000/01,Queenscliff,Pot,Lobster,43112,131320
-2001,2001/02,Queenscliff,Pot,Lobster,33385,97112
-2002,2002/03,Queenscliff,Pot,Lobster,34346,88300
-2003,2003/04,Queenscliff,Pot,Lobster,38653,93466
-2004,2004/05,Queenscliff,Pot,Lobster,37350,95030
-2005,2005/06,Queenscliff,Pot,Lobster,27606,73016
-2006,2006/07,Queenscliff,Pot,Lobster,30585,80745
-2007,2007/08,Queenscliff,Pot,Lobster,23656,67662
-2008,2008/09,Queenscliff,Pot,Lobster,21257,61158
-2009,2009/10,Queenscliff,Pot,Lobster,31628,86575
-2010,2010/11,Queenscliff,Pot,Lobster,35375,80654
-2011,2011/12,Queenscliff,Pot,Lobster,35407,70440
-2012,2012/13,Queenscliff,Pot,Lobster,29448,54159
-2013,2013/14,Queenscliff,Pot,Lobster,37729,71953
-2014,2014/15,Queenscliff,Pot,Lobster,39447,75726
-2015,2015/16,Queenscliff,Pot,Lobster,33614,73489
+display_year,region,catch,effort
+1978/79,All Regions,143754,203629
+1979/80,All Regions,121535,174170
+1980/81,All Regions,140505,194288
+1981/82,All Regions,134943,203566
+1982/83,All Regions,147095,227574
+1983/84,All Regions,131736,233991
+1984/85,All Regions,110083,206384
+1985/86,All Regions,96229,185699
+1986/87,All Regions,81149,154057
+1987/88,All Regions,72957,134077
+1988/89,All Regions,72854,167151
+1989/90,All Regions,97402,225195.5
+1990/91,All Regions,79679,183388
+1991/92,All Regions,68121,182448
+1992/93,All Regions,73346,238035
+1993/94,All Regions,81681,270110
+1994/95,All Regions,73251,257795
+1995/96,All Regions,58176,224141
+1996/97,All Regions,59975,222272.11
+1997/98,All Regions,67045,223099
+1998/99,All Regions,67430,219910
+1999/00,All Regions,74773,232025
+2000/01,All Regions,72809,219338
+2001/02,All Regions,53532,151123
+2002/03,All Regions,52537,134208
+2003/04,All Regions,55652,132567
+2004/05,All Regions,54897,136181
+2005/06,All Regions,52424,122283
+2006/07,All Regions,53952,135526
+2007/08,All Regions,46089,122776
+2008/09,All Regions,39573,107755
+2009/10,All Regions,55338,145877
+2010/11,All Regions,65793,150422
+2011/12,All Regions,61717,113610
+2012/13,All Regions,48078,93876
+2013/14,All Regions,58899,113972
+2014/15,All Regions,57500,109654
+2015/16,All Regions,46409,108689
+1978/79,Lakes Entrance,33455,29358
+1979/80,Lakes Entrance,17245,14712
+1980/81,Lakes Entrance,18913,14077
+1981/82,Lakes Entrance,18024,14438
+1982/83,Lakes Entrance,11901,7009
+1983/84,Lakes Entrance,11093,7797
+1984/85,Lakes Entrance,18596,12316
+1985/86,Lakes Entrance,19636,12965
+1986/87,Lakes Entrance,12655,7824
+1987/88,Lakes Entrance,14498,9688
+1988/89,Lakes Entrance,17720,15371
+1989/90,Lakes Entrance,15408,15778
+1990/91,Lakes Entrance,12969,11506
+1991/92,Lakes Entrance,5921,7545
+1992/93,Lakes Entrance,7624,11692
+1993/94,Lakes Entrance,7422,12189
+1994/95,Lakes Entrance,12729,21546
+1995/96,Lakes Entrance,6124,12303
+1996/97,Lakes Entrance,12360,18944.11
+1997/98,Lakes Entrance,11637,17438
+1998/99,Lakes Entrance,9834,17341
+1999/00,Lakes Entrance,7502,15065
+2000/01,Lakes Entrance,9644,16538
+2001/02,Lakes Entrance,3840,6769
+2002/03,Lakes Entrance,4953,6504
+2003/04,Lakes Entrance,3119,4640
+2004/05,Lakes Entrance,4105,5416
+2005/06,Lakes Entrance,2166,2867
+2006/07,Lakes Entrance,2490,4382
+2007/08,Lakes Entrance,1848,3537
+2008/09,Lakes Entrance,1291,1942
+2009/10,Lakes Entrance,1342,1956
+2010/11,Lakes Entrance,2621,12811
+2011/12,Lakes Entrance,1524,3566
+2012/13,Lakes Entrance,1085,2344
+2013/14,Lakes Entrance,1973,3673
+2014/15,Lakes Entrance,2498,4176
+2015/16,Lakes Entrance,2040,3006
+1978/79,San Remo,43476,69829
+1979/80,San Remo,37379,61437
+1980/81,San Remo,49145,73824
+1981/82,San Remo,54251,74064
+1982/83,San Remo,62282,87854
+1983/84,San Remo,40944,76908
+1984/85,San Remo,40115,76846
+1985/86,San Remo,30907,61181
+1986/87,San Remo,26767,51775
+1987/88,San Remo,18952,42426
+1988/89,San Remo,16649,52463
+1989/90,San Remo,19831,67950
+1990/91,San Remo,18038,53011
+1991/92,San Remo,14896,45600
+1992/93,San Remo,26630,86767
+1993/94,San Remo,31733,104957
+1994/95,San Remo,28421,100200
+1995/96,San Remo,17931,68251
+1996/97,San Remo,20368,78844
+1997/98,San Remo,26351,91799
+1998/99,San Remo,24371,90320
+1999/00,San Remo,22810,87848
+2000/01,San Remo,20053,71480
+2001/02,San Remo,16307,47242
+2002/03,San Remo,13238,39404
+2003/04,San Remo,13880,34461
+2004/05,San Remo,13442,35735
+2005/06,San Remo,22652,46400
+2006/07,San Remo,20877,50399
+2007/08,San Remo,20585,51577
+2008/09,San Remo,17025,44655
+2009/10,San Remo,22368,57346
+2010/11,San Remo,27797,56957
+2011/12,San Remo,24786,39604
+2012/13,San Remo,17545,37373
+2013/14,San Remo,19197,38346
+2014/15,San Remo,15555,29752
+2015/16,San Remo,10755,32194
+1978/79,Queenscliff,66823,104442
+1979/80,Queenscliff,66911,98021
+1980/81,Queenscliff,72447,106387
+1981/82,Queenscliff,62668,115064
+1982/83,Queenscliff,72912,132711
+1983/84,Queenscliff,79699,149286
+1984/85,Queenscliff,51372,117222
+1985/86,Queenscliff,45686,111553
+1986/87,Queenscliff,41727,94458
+1987/88,Queenscliff,39507,81963
+1988/89,Queenscliff,38485,99317
+1989/90,Queenscliff,62163,141467.5
+1990/91,Queenscliff,48672,118871
+1991/92,Queenscliff,47304,129303
+1992/93,Queenscliff,39092,139576
+1993/94,Queenscliff,42526,152964
+1994/95,Queenscliff,32101,136049
+1995/96,Queenscliff,34121,143587
+1996/97,Queenscliff,27247,124484
+1997/98,Queenscliff,29057,113862
+1998/99,Queenscliff,33225,112249
+1999/00,Queenscliff,44461,129112
+2000/01,Queenscliff,43112,131320
+2001/02,Queenscliff,33385,97112
+2002/03,Queenscliff,34346,88300
+2003/04,Queenscliff,38653,93466
+2004/05,Queenscliff,37350,95030
+2005/06,Queenscliff,27606,73016
+2006/07,Queenscliff,30585,80745
+2007/08,Queenscliff,23656,67662
+2008/09,Queenscliff,21257,61158
+2009/10,Queenscliff,31628,86575
+2010/11,Queenscliff,35375,80654
+2011/12,Queenscliff,35407,70440
+2012/13,Queenscliff,29448,54159
+2013/14,Queenscliff,37729,71953
+2014/15,Queenscliff,39447,75726
+2015/16,Queenscliff,33614,73489

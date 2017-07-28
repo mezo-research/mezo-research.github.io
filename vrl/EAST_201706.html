@@ -284,7 +284,27 @@
     };
     getdata_elid_2();
   </script>
-
+</div>
+<br>
+<button onclick="elid_2_table_display()">Show/Hide Data</button>
+<div id="elid_2_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_2_table_display() {
+        var x = document.getElementById('elid_2_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_CE_annual.csv',
+      element: 'elid_2_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 2, "asc" ]]}
+    });
+  </script>
 </div>
 <p><br>Total annual catch (kg) in the Rock Lobster Eastern Zone fishery from 1978/79 to present, displayed by financial year. Horizontal line indicates the Total Allowable Catch (TAC) between 2009/10 and present. TAC was introduced to the fishery in 2001/02, but for the first eight years was based on fishing season (Nov-Sept) and not financial year.<br></p>
 
@@ -415,7 +435,27 @@
     };
     getdata_elid_3();
   </script>
-
+</div>
+<br>
+<button onclick="elid_3_table_display()">Show/Hide Data</button>
+<div id="elid_3_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_3_table_display() {
+        var x = document.getElementById('elid_3_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_CE_annual.csv',
+      element: 'elid_3_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 2, "asc" ]]}
+    });
+  </script>
 </div>
 <p><br>Total annual catch (tonnes) and effort (# pot lifts) selectable by region (Queenscliff, San Remo and Lakes Entrance) and for all of fishery. Data displayed by fishing season (Nov-Sept).<br></p>
 
@@ -596,7 +636,27 @@
     };
     getdata_elid_5();
   </script>
-
+<br>
+<!-- <button onclick="elid_5_table_display()">Show/Hide Data</button>
+<div id="elid_5_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_5_table_display() {
+        var x = document.getElementById('elid_5_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_LF.csv',
+      element: 'elid_5_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 2, "asc" ]]}
+    });
+  </script>
+</div> -->
 <p><br>Length frequency of rock lobsters sampled in the observer and fixed-site surveys. Displays four sequential years, with most recent year selected under the "Year" dropdown. Selectable by sex (male/female) and survey type (observer/fixed-site). Dashed line is legal minimum length.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
@@ -607,58 +667,34 @@
 <div id="elid_6" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_6 = [];
-    var survey_data_elid_6 = [];
     var region_data_elid_6 = [];
-    var sex_data_elid_6 = [];
-    var subgroup_data_elid_6 = [];
     var value_data_elid_6 = [];
-    var error_data_elid_6 = [];
     var display_year_list_elid_6 = [];
-    var unique_survey_elid_6 = [];
     var unique_region_elid_6 = [];
-    var unique_sex_elid_6 = [];
-    var unique_subgroup_elid_6 = [];
     var current_display_year_elid_6 = "";
-    var current_survey_elid_6 = "";
     var current_region_elid_6 = "";
-    var current_sex_elid_6 = "";
-    var current_subgroup_elid_6 = "";
     var survey_id_elid_6 = "ave_weight";
     var ref_value_elid_6 = "average";
 
     function getdata_elid_6() {
-      Plotly.d3.csv("assets/data/EAST_201706_abundance.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_ave_weight.csv", function(data){
         processData_elid_6(data)
       });
     };
     function processData_elid_6(allRows) {
       display_year_data_elid_6 = [];
-      survey_data_elid_6 = [];
       region_data_elid_6 = [];
-      sex_data_elid_6 = [];
-      subgroup_data_elid_6 = [];
       value_data_elid_6 = [];
-      error_data_elid_6 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        if (row['survey_id'] == survey_id_elid_6) {
-          display_year_data_elid_6.push( row['display_year'] );
-          survey_data_elid_6.push( row['survey_id'] );
-          region_data_elid_6.push( row['region'] );
-          sex_data_elid_6.push( row['sex'] );
-          subgroup_data_elid_6.push( row['subgroup'] );
-          value_data_elid_6.push( Number(row['value']) );
-          error_data_elid_6.push( Number(row['error']) );
-        }
+        display_year_data_elid_6.push( row['display_year'] );
+        region_data_elid_6.push( row['region'] );
+        value_data_elid_6.push( Number(row['value']) );
       }
       display_year_list_elid_6 = getUniques(display_year_data_elid_6);
       unique_region_elid_6 = getUniques(region_data_elid_6);
-      unique_sex_elid_6 = getUniques(sex_data_elid_6);
-      unique_subgroup_elid_6 = getUniques(subgroup_data_elid_6);
       current_display_year_elid_6 = display_year_list_elid_6[0];
       current_region_elid_6 = unique_region_elid_6[0];
-      current_sex_elid_6 = unique_sex_elid_6[0];
-      current_subgroup_elid_6 = unique_subgroup_elid_6[0];
       updatePlot_elid_6();  // Put it here to fix the asynchronous function issue
     };
     function updatePlot_elid_6(){
@@ -667,7 +703,7 @@
         current_region_elid_6 = unique_region_elid_6[i];
         var curr_display_years = getFilteredArray(display_year_data_elid_6, [region_data_elid_6], [current_region_elid_6]);
         var curr_values = getFilteredArray(value_data_elid_6, [region_data_elid_6], [current_region_elid_6]);
-        var curr_errors = getFilteredArray(error_data_elid_6, [region_data_elid_6], [current_region_elid_6]);
+        var curr_errors = [];
         var trace = {
           type: "scatter",
           mode: "lines",
@@ -711,7 +747,27 @@
     };
     getdata_elid_6();
   </script>
-
+</div>
+<br>
+<button onclick="elid_6_table_display()">Show/Hide Data</button>
+<div id="elid_6_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_6_table_display() {
+        var x = document.getElementById('elid_6_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_ave_weight.csv',
+      element: 'elid_6_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+    });
+  </script>
 </div>
 <p><br>Average weight in kg of rock lobster caught each fishing season (Nov-Sept), selectable by region (Queenscliff, San Remo and Lakes Entrance) and for all of fishery. Dashed line is series average.<br></p>
 
@@ -726,19 +782,15 @@
 <div id="elid_7" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_7 = [];
-    var survey_data_elid_7 = [];
     var region_data_elid_7 = [];
     var sex_data_elid_7 = [];
     var subgroup_data_elid_7 = [];
     var value_data_elid_7 = [];
-    var error_data_elid_7 = [];
     var display_year_list_elid_7 = [];
-    var unique_survey_elid_7 = [];
     var unique_region_elid_7 = [];
     var unique_sex_elid_7 = [];
     var unique_subgroup_elid_7 = [];
     var current_display_year_elid_7 = "";
-    var current_survey_elid_7 = "";
     var current_region_elid_7 = "";
     var current_sex_elid_7 = "";
     var current_subgroup_elid_7 = "";
@@ -748,13 +800,12 @@
     subgroup_elid_7.addEventListener("change", updatePlot_elid_7, false);
 
     function getdata_elid_7() {
-      Plotly.d3.csv("assets/data/EAST_201706_abundance.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_fixed_site.csv", function(data){
         processData_elid_7(data)
       });
     };
     function processData_elid_7(allRows) {
       display_year_data_elid_7 = [];
-      survey_data_elid_7 = [];
       region_data_elid_7 = [];
       sex_data_elid_7 = [];
       subgroup_data_elid_7 = [];
@@ -762,15 +813,11 @@
       error_data_elid_7 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        if (row['survey_id'] == survey_id_elid_7) {
-          display_year_data_elid_7.push( row['display_year'] );
-          survey_data_elid_7.push( row['survey_id'] );
-          region_data_elid_7.push( row['region'] );
-          sex_data_elid_7.push( row['sex'] );
-          subgroup_data_elid_7.push( row['subgroup'] );
-          value_data_elid_7.push( Number(row['value']) );
-          error_data_elid_7.push( Number(row['error']) );
-        }
+        display_year_data_elid_7.push( row['display_year'] );
+        region_data_elid_7.push( row['region'] );
+        sex_data_elid_7.push( row['sex'] );
+        subgroup_data_elid_7.push( row['subgroup'] );
+        value_data_elid_7.push( Number(row['value']) );
       }
       display_year_list_elid_7 = getUniques(display_year_data_elid_7);
       unique_region_elid_7 = getUniques(region_data_elid_7);
@@ -840,6 +887,27 @@
     getdata_elid_7();
   </script>
 </div>
+<br>
+<button onclick="elid_7_table_display()">Show/Hide Data</button>
+<div id="elid_7_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_7_table_display() {
+        var x = document.getElementById('elid_7_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_fixed_site.csv',
+      element: 'elid_7_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+    });
+  </script>
+</div>
 <p><br>CPUE for rock lobster caught at fisheries-independent fixed-site surveys, selectable by sex (male/female) and size (juvenile/adult). Data displayed by fishing season (Nov-Sept). These surveys use pots with escape gaps open. Dashed line is series average<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
@@ -853,19 +921,15 @@
 <div id="elid_8" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_8 = [];
-    var survey_data_elid_8 = [];
     var region_data_elid_8 = [];
     var sex_data_elid_8 = [];
     var subgroup_data_elid_8 = [];
     var value_data_elid_8 = [];
-    var error_data_elid_8 = [];
     var display_year_list_elid_8 = [];
-    var unique_survey_elid_8 = [];
     var unique_region_elid_8 = [];
     var unique_sex_elid_8 = [];
     var unique_subgroup_elid_8 = [];
     var current_display_year_elid_8 = "";
-    var current_survey_elid_8 = "";
     var current_region_elid_8 = "";
     var current_sex_elid_8 = "";
     var current_subgroup_elid_8 = "";
@@ -875,29 +939,23 @@
     subgroup_elid_8.addEventListener("change", updatePlot_elid_8, false);
 
     function getdata_elid_8() {
-      Plotly.d3.csv("assets/data/EAST_201706_abundance.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_observer.csv", function(data){
         processData_elid_8(data)
       });
     };
     function processData_elid_8(allRows) {
       display_year_data_elid_8 = [];
-      survey_data_elid_8 = [];
       region_data_elid_8 = [];
       sex_data_elid_8 = [];
       subgroup_data_elid_8 = [];
       value_data_elid_8 = [];
-      error_data_elid_8 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        if (row['survey_id'] == survey_id_elid_8) {
-          display_year_data_elid_8.push( row['display_year'] );
-          survey_data_elid_8.push( row['survey_id'] );
-          region_data_elid_8.push( row['region'] );
-          sex_data_elid_8.push( row['sex'] );
-          subgroup_data_elid_8.push( row['subgroup'] );
-          value_data_elid_8.push( Number(row['value']) );
-          error_data_elid_8.push( Number(row['error']) );
-        }
+        display_year_data_elid_8.push( row['display_year'] );
+        region_data_elid_8.push( row['region'] );
+        sex_data_elid_8.push( row['sex'] );
+        subgroup_data_elid_8.push( row['subgroup'] );
+        value_data_elid_8.push( Number(row['value']) );
       }
       display_year_list_elid_8 = getUniques(display_year_data_elid_8);
       unique_region_elid_8 = getUniques(region_data_elid_8);
@@ -918,7 +976,7 @@
         current_sex_elid_8 = unique_sex_elid_8[i];
         var curr_display_years = getFilteredArray(display_year_data_elid_8, [sex_data_elid_8, subgroup_data_elid_8], [current_sex_elid_8, current_subgroup_elid_8]);
         var curr_values = getFilteredArray(value_data_elid_8, [sex_data_elid_8, subgroup_data_elid_8], [current_sex_elid_8, current_subgroup_elid_8]);
-        var curr_errors = getFilteredArray(error_data_elid_8, [sex_data_elid_8, subgroup_data_elid_8], [current_sex_elid_8, current_subgroup_elid_8]);
+        var curr_errors = [];
         var trace = {
           type: "scatter",
           mode: "lines",
@@ -961,6 +1019,27 @@
       Plotly.newPlot("elid_8", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
     };
     getdata_elid_8();
+  </script>
+</div>
+<br>
+<button onclick="elid_8_table_display()">Show/Hide Data</button>
+<div id="elid_8_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_8_table_display() {
+        var x = document.getElementById('elid_8_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_observer.csv',
+      element: 'elid_8_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+    });
   </script>
 </div>
 <p><br>CPUE for rock lobster recorded by on-board observers, selectable by sex (male/female) and size (juvenile/adult). Data displayed by fishing season (Nov-Sept). These surveys use regular commercial pots with escape gaps open. Dashed line is series average.<br></p>
