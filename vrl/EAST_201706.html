@@ -302,7 +302,7 @@
       element: 'elid_2_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 2, "asc" ]]}
+      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
     });
   </script>
 </div>
@@ -1159,6 +1159,31 @@
     getdata_elid_1();
   </script>
 </div>
+<br>
+<button onclick="elid_1_table_display()">Show/Hide Data</button>
+<div id="elid_1_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_1_table_display() {
+        var x = document.getElementById('elid_1_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_monthly.csv',
+      element: 'elid_1_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 3, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
+</div>
 <p><br>Monthly update of key fishery statistics for the current and previous quota season (Jun-July). Selectable as monthly catch, cumulative catch, or monthly CPUE. Data presented is for the whole fishery. TAC for current year is indicated by a dashed grey line.<br></p>
 
 </div>
@@ -1172,39 +1197,29 @@
 <div id="elid_9" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_9 = [];
-    var survey_data_elid_9 = [];
     var region_data_elid_9 = [];
     var value_data_elid_9 = [];
-    var error_data_elid_9 = [];
     var display_year_list_elid_9 = [];
-    var unique_survey_elid_9 = [];
     var unique_region_elid_9 = [];
     var current_display_year_elid_9 = "";
-    var current_survey_elid_9 = "";
     var current_region_elid_9 = "";
     var survey_id_elid_9 = "cpue_stan";
     var ref_value_elid_9 = "0.0";
 
     function getdata_elid_9() {
-      Plotly.d3.csv("assets/data/EAST_201706_abundance.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_cpue_stan.csv", function(data){
         processData_elid_9(data)
       });
     };
     function processData_elid_9(allRows) {
       display_year_data_elid_9 = [];
-      survey_data_elid_9 = [];
       region_data_elid_9 = [];
       value_data_elid_9 = [];
-      error_data_elid_9 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        if (row['survey_id'] == survey_id_elid_9) {
-          display_year_data_elid_9.push( row['display_year'] );
-          survey_data_elid_9.push( row['survey_id'] );
-          region_data_elid_9.push( row['region'] );
-          value_data_elid_9.push( Number(row['value']) );
-          error_data_elid_9.push( Number(row['error']) );
-        }
+        display_year_data_elid_9.push( row['display_year'] );
+        region_data_elid_9.push( row['region'] );
+        value_data_elid_9.push( Number(row['value']) );
       }
       display_year_list_elid_9 = getUniques(display_year_data_elid_9);
       unique_region_elid_9 = getUniques(region_data_elid_9);
@@ -1218,7 +1233,7 @@
       for (var i = 0; i < unique_region_elid_9.length;  i++) {
         var curr_display_years = getFilteredArray(display_year_data_elid_9, [region_data_elid_9], [unique_region_elid_9[i]]);
         var curr_values = getFilteredArray(value_data_elid_9, [region_data_elid_9], [unique_region_elid_9[i]]);
-        var curr_errors = getFilteredArray(error_data_elid_9, [region_data_elid_9], [unique_region_elid_9[i]]);
+        var curr_errors = [];
         var trace = {
           type: "scatter",
           mode: "lines",
@@ -1258,6 +1273,31 @@
     getdata_elid_9();
   </script>
 </div>
+<br>
+<button onclick="elid_9_table_display()">Show/Hide Data</button>
+<div id="elid_9_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_9_table_display() {
+        var x = document.getElementById('elid_9_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_cpue_stan.csv',
+      element: 'elid_9_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
+</div>
 <p><br>Annual time series of standardised catch-per-unit effort (CPUE) (kg/potlift), plotted by region.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
@@ -1271,39 +1311,29 @@
 <div id="elid_10" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_10 = [];
-    var survey_data_elid_10 = [];
     var region_data_elid_10 = [];
     var value_data_elid_10 = [];
-    var error_data_elid_10 = [];
     var display_year_list_elid_10 = [];
-    var unique_survey_elid_10 = [];
     var unique_region_elid_10 = [];
     var current_display_year_elid_10 = "";
-    var current_survey_elid_10 = "";
     var current_region_elid_10 = "";
     var survey_id_elid_10 = "recruits";
     var ref_value_elid_10 = "1.0";
 
     function getdata_elid_10() {
-      Plotly.d3.csv("assets/data/EAST_201706_models.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_recruits.csv", function(data){
         processData_elid_10(data)
       });
     };
     function processData_elid_10(allRows) {
       display_year_data_elid_10 = [];
-      survey_data_elid_10 = [];
       region_data_elid_10 = [];
       value_data_elid_10 = [];
-      error_data_elid_10 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        if (row['survey_id'] == survey_id_elid_10) {
-          display_year_data_elid_10.push( row['display_year'] );
-          survey_data_elid_10.push( row['survey_id'] );
-          region_data_elid_10.push( row['region'] );
-          value_data_elid_10.push( Number(row['value']) );
-          error_data_elid_10.push( Number(row['error']) );
-        }
+        display_year_data_elid_10.push( row['display_year'] );
+        region_data_elid_10.push( row['region'] );
+        value_data_elid_10.push( Number(row['value']) );
       }
       display_year_list_elid_10 = getUniques(display_year_data_elid_10);
       unique_region_elid_10 = getUniques(region_data_elid_10);
@@ -1316,7 +1346,7 @@
       var data = [];
       var curr_display_years = getFilteredArray(display_year_data_elid_10, [region_data_elid_10], [current_region_elid_10]);
       var curr_values = getFilteredArray(value_data_elid_10, [region_data_elid_10], [current_region_elid_10]);
-      var curr_errors = getFilteredArray(error_data_elid_10, [region_data_elid_10], [current_region_elid_10]);
+      var curr_errors = [];
       var trace = {
         type: "scatter",
         mode: "lines",
@@ -1367,7 +1397,31 @@
     };
     getdata_elid_10();
   </script>
-
+</div>
+<br>
+<button onclick="elid_10_table_display()">Show/Hide Data</button>
+<div id="elid_10_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_10_table_display() {
+        var x = document.getElementById('elid_10_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_recruits.csv',
+      element: 'elid_10_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
 </div>
 <p><br>Relative abundance of recruits (<60mm), as estimated by the rock lobster model, from 1978/79 to present.<br></p>
 
@@ -1382,39 +1436,29 @@
 <div id="elid_11" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_11 = [];
-    var survey_data_elid_11 = [];
     var region_data_elid_11 = [];
     var value_data_elid_11 = [];
-    var error_data_elid_11 = [];
     var display_year_list_elid_11 = [];
-    var unique_survey_elid_11 = [];
     var unique_region_elid_11 = [];
     var current_display_year_elid_11 = "";
-    var current_survey_elid_11 = "";
     var current_region_elid_11 = "";
     var survey_id_elid_11 = "egg_prod";
     var ref_value_elid_11 = "20.0";
 
     function getdata_elid_11() {
-      Plotly.d3.csv("assets/data/EAST_201706_models.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_egg_prod.csv", function(data){
         processData_elid_11(data)
       });
     };
     function processData_elid_11(allRows) {
       display_year_data_elid_11 = [];
-      survey_data_elid_11 = [];
       region_data_elid_11 = [];
       value_data_elid_11 = [];
-      error_data_elid_11 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        if (row['survey_id'] == survey_id_elid_11) {
-          display_year_data_elid_11.push( row['display_year'] );
-          survey_data_elid_11.push( row['survey_id'] );
-          region_data_elid_11.push( row['region'] );
-          value_data_elid_11.push( Number(row['value']) );
-          error_data_elid_11.push( Number(row['error']) );
-        }
+        display_year_data_elid_11.push( row['display_year'] );
+        region_data_elid_11.push( row['region'] );
+        value_data_elid_11.push( Number(row['value']) );
       }
       display_year_list_elid_11 = getUniques(display_year_data_elid_11);
       unique_region_elid_11 = getUniques(region_data_elid_11);
@@ -1427,7 +1471,7 @@
       var data = [];
       var curr_display_years = getFilteredArray(display_year_data_elid_11, [region_data_elid_11], [current_region_elid_11]);
       var curr_values = getFilteredArray(value_data_elid_11, [region_data_elid_11], [current_region_elid_11]);
-      var curr_errors = getFilteredArray(error_data_elid_11, [region_data_elid_11], [current_region_elid_11]);
+      var curr_errors = [];
       var trace = {
         type: "scatter",
         mode: "lines",
@@ -1478,7 +1522,31 @@
     };
     getdata_elid_11();
   </script>
-
+</div>
+<br>
+<button onclick="elid_11_table_display()">Show/Hide Data</button>
+<div id="elid_11_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_11_table_display() {
+        var x = document.getElementById('elid_11_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_egg_prod.csv',
+      element: 'elid_11_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
 </div>
 <p><br>Model estimated Rock lobster egg production, as percentage of the estimated 1951 level. Dashed line is the limit reference point from the Harvest strategy.<br></p>
 
@@ -1497,7 +1565,6 @@
     var biomass_data_elid_12 = [];
     var exploitation_data_elid_12 = [];
     var display_year_list_elid_12 = [];
-    var unique_survey_elid_12 = [];
     var unique_region_elid_12 = [];
     var current_display_year_elid_12 = "";
     var current_region_elid_12 = "";
@@ -1505,7 +1572,7 @@
     var exploitation_id_elid_12 = "exploitation";
 
     function getdata_elid_12() {
-      Plotly.d3.csv("assets/data/EAST_201706_models.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_biomass_ex.csv", function(data){
         processData_elid_12(data)
       });
     };
@@ -1579,6 +1646,31 @@
       Plotly.newPlot("elid_12", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
     };
     getdata_elid_12();
+  </script>
+</div>
+<br>
+<button onclick="elid_12_table_display()">Show/Hide Data</button>
+<div id="elid_12_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_12_table_display() {
+        var x = document.getElementById('elid_12_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_biomass_ex.csv',
+      element: 'elid_12_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {"paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
   </script>
 </div>
 <p><br>Model estimated available biomass and proportional exploitation in the Rock lobster fishery from 1978/79 to present.<br></p>

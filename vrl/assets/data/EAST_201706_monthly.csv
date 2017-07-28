@@ -1,70 +1,70 @@
-plot_year,display_year,month_seq,month,survey_id,region,fleet,species,factor_1,factor_2,value,error
-2016,2016/17,1,Jul,Catch,All,Pot,Rock Lobster,,,4783,
-2016,2016/17,2,Aug,Catch,All,Pot,Rock Lobster,,,7023,
-2016,2016/17,3,Sep,Catch,All,Pot,Rock Lobster,,,4042,
-2016,2016/17,4,Oct,Catch,All,Pot,Rock Lobster,,,0,
-2016,2016/17,5,Nov,Catch,All,Pot,Rock Lobster,,,1994,
-2016,2016/17,6,Dec,Catch,All,Pot,Rock Lobster,,,12078,
-2016,2016/17,7,Jan,Catch,All,Pot,Rock Lobster,,,8637,
-2016,2016/17,8,Feb,Catch,All,Pot,Rock Lobster,,,4112,
-2016,2016/17,9,Mar,Catch,All,Pot,Rock Lobster,,,1268,
-2016,2016/17,10,Apr,Catch,All,Pot,Rock Lobster,,,2531,
-2016,2016/17,11,May,Catch,All,Pot,Rock Lobster,,,1706,
-2016,2016/17,1,Jul,Catch (cum),All,Pot,Rock Lobster,,,4783,
-2016,2016/17,2,Aug,Catch (cum),All,Pot,Rock Lobster,,,11806,
-2016,2016/17,3,Sep,Catch (cum),All,Pot,Rock Lobster,,,15848,
-2016,2016/17,4,Oct,Catch (cum),All,Pot,Rock Lobster,,,15848,
-2016,2016/17,5,Nov,Catch (cum),All,Pot,Rock Lobster,,,17842,
-2016,2016/17,6,Dec,Catch (cum),All,Pot,Rock Lobster,,,29920,
-2016,2016/17,7,Jan,Catch (cum),All,Pot,Rock Lobster,,,38557,
-2016,2016/17,8,Feb,Catch (cum),All,Pot,Rock Lobster,,,42669,
-2016,2016/17,9,Mar,Catch (cum),All,Pot,Rock Lobster,,,43937,
-2016,2016/17,10,Apr,Catch (cum),All,Pot,Rock Lobster,,,46468,
-2016,2016/17,11,May,Catch (cum),All,Pot,Rock Lobster,,,48174,
-2016,2016/17,1,Jul,CPUE,All,Pot,Rock Lobster,,,0.52,
-2016,2016/17,2,Aug,CPUE,All,Pot,Rock Lobster,,,0.35,
-2016,2016/17,3,Sep,CPUE,All,Pot,Rock Lobster,,,0.34,
-2016,2016/17,4,Oct,CPUE,All,Pot,Rock Lobster,,,,
-2016,2016/17,5,Nov,CPUE,All,Pot,Rock Lobster,,,0.37,
-2016,2016/17,6,Dec,CPUE,All,Pot,Rock Lobster,,,0.61,
-2016,2016/17,7,Jan,CPUE,All,Pot,Rock Lobster,,,0.49,
-2016,2016/17,8,Feb,CPUE,All,Pot,Rock Lobster,,,0.6,
-2016,2016/17,9,Mar,CPUE,All,Pot,Rock Lobster,,,0.46,
-2016,2016/17,10,Apr,CPUE,All,Pot,Rock Lobster,,,0.55,
-2016,2016/17,11,May,CPUE,All,Pot,Rock Lobster,,,0.37,
-2015,2015/16,1,Jul,Catch,All,Pot,Rock Lobster,,,8221,
-2015,2015/16,2,Aug,Catch,All,Pot,Rock Lobster,,,11638,
-2015,2015/16,3,Sep,Catch,All,Pot,Rock Lobster,,,3922,
-2015,2015/16,4,Oct,Catch,All,Pot,Rock Lobster,,,0,
-2015,2015/16,5,Nov,Catch,All,Pot,Rock Lobster,,,3714,
-2015,2015/16,6,Dec,Catch,All,Pot,Rock Lobster,,,11640,
-2015,2015/16,7,Jan,Catch,All,Pot,Rock Lobster,,,7586,
-2015,2015/16,8,Feb,Catch,All,Pot,Rock Lobster,,,3376,
-2015,2015/16,9,Mar,Catch,All,Pot,Rock Lobster,,,2987,
-2015,2015/16,10,Apr,Catch,All,Pot,Rock Lobster,,,2627,
-2015,2015/16,11,May,Catch,All,Pot,Rock Lobster,,,1390,
-2015,2015/16,12,Jun,Catch,All,Pot,Rock Lobster,,,697,
-2015,2015/16,1,Jul,Catch (cum),All,Pot,Rock Lobster,,,8221,
-2015,2015/16,2,Aug,Catch (cum),All,Pot,Rock Lobster,,,19859,
-2015,2015/16,3,Sep,Catch (cum),All,Pot,Rock Lobster,,,23781,
-2015,2015/16,4,Oct,Catch (cum),All,Pot,Rock Lobster,,,23781,
-2015,2015/16,5,Nov,Catch (cum),All,Pot,Rock Lobster,,,27495,
-2015,2015/16,6,Dec,Catch (cum),All,Pot,Rock Lobster,,,39135,
-2015,2015/16,7,Jan,Catch (cum),All,Pot,Rock Lobster,,,46721,
-2015,2015/16,8,Feb,Catch (cum),All,Pot,Rock Lobster,,,50097,
-2015,2015/16,9,Mar,Catch (cum),All,Pot,Rock Lobster,,,53084,
-2015,2015/16,10,Apr,Catch (cum),All,Pot,Rock Lobster,,,55711,
-2015,2015/16,11,May,Catch (cum),All,Pot,Rock Lobster,,,57101,
-2015,2015/16,12,Jun,Catch (cum),All,Pot,Rock Lobster,,,57798,
-2015,2015/16,1,Jul,CPUE,All,Pot,Rock Lobster,,,0.54,
-2015,2015/16,2,Aug,CPUE,All,Pot,Rock Lobster,,,0.67,
-2015,2015/16,3,Sep,CPUE,All,Pot,Rock Lobster,,,0.45,
-2015,2015/16,4,Oct,CPUE,All,Pot,Rock Lobster,,,,
-2015,2015/16,5,Nov,CPUE,All,Pot,Rock Lobster,,,0.58,
-2015,2015/16,6,Dec,CPUE,All,Pot,Rock Lobster,,,0.61,
-2015,2015/16,7,Jan,CPUE,All,Pot,Rock Lobster,,,0.65,
-2015,2015/16,8,Feb,CPUE,All,Pot,Rock Lobster,,,0.5,
-2015,2015/16,9,Mar,CPUE,All,Pot,Rock Lobster,,,0.49,
-2015,2015/16,10,Apr,CPUE,All,Pot,Rock Lobster,,,0.49,
-2015,2015/16,11,May,CPUE,All,Pot,Rock Lobster,,,0.26,
-2015,2015/16,11,Jun,CPUE,All,Pot,Rock Lobster,,,0.16,
+display_year,month_seq,month,survey_id,region,value
+2016/17,1,Jul,Catch,All,4783
+2016/17,2,Aug,Catch,All,7023
+2016/17,3,Sep,Catch,All,4042
+2016/17,4,Oct,Catch,All,0
+2016/17,5,Nov,Catch,All,1994
+2016/17,6,Dec,Catch,All,12078
+2016/17,7,Jan,Catch,All,8637
+2016/17,8,Feb,Catch,All,4112
+2016/17,9,Mar,Catch,All,1268
+2016/17,10,Apr,Catch,All,2531
+2016/17,11,May,Catch,All,1706
+2016/17,1,Jul,Catch (cum),All,4783
+2016/17,2,Aug,Catch (cum),All,11806
+2016/17,3,Sep,Catch (cum),All,15848
+2016/17,4,Oct,Catch (cum),All,15848
+2016/17,5,Nov,Catch (cum),All,17842
+2016/17,6,Dec,Catch (cum),All,29920
+2016/17,7,Jan,Catch (cum),All,38557
+2016/17,8,Feb,Catch (cum),All,42669
+2016/17,9,Mar,Catch (cum),All,43937
+2016/17,10,Apr,Catch (cum),All,46468
+2016/17,11,May,Catch (cum),All,48174
+2016/17,1,Jul,CPUE,All,0.52
+2016/17,2,Aug,CPUE,All,0.35
+2016/17,3,Sep,CPUE,All,0.34
+2016/17,4,Oct,CPUE,All,0
+2016/17,5,Nov,CPUE,All,0.37
+2016/17,6,Dec,CPUE,All,0.61
+2016/17,7,Jan,CPUE,All,0.49
+2016/17,8,Feb,CPUE,All,0.6
+2016/17,9,Mar,CPUE,All,0.46
+2016/17,10,Apr,CPUE,All,0.55
+2016/17,11,May,CPUE,All,0.37
+2015/16,1,Jul,Catch,All,8221
+2015/16,2,Aug,Catch,All,11638
+2015/16,3,Sep,Catch,All,3922
+2015/16,4,Oct,Catch,All,0
+2015/16,5,Nov,Catch,All,3714
+2015/16,6,Dec,Catch,All,11640
+2015/16,7,Jan,Catch,All,7586
+2015/16,8,Feb,Catch,All,3376
+2015/16,9,Mar,Catch,All,2987
+2015/16,10,Apr,Catch,All,2627
+2015/16,11,May,Catch,All,1390
+2015/16,12,Jun,Catch,All,697
+2015/16,1,Jul,Catch (cum),All,8221
+2015/16,2,Aug,Catch (cum),All,19859
+2015/16,3,Sep,Catch (cum),All,23781
+2015/16,4,Oct,Catch (cum),All,23781
+2015/16,5,Nov,Catch (cum),All,27495
+2015/16,6,Dec,Catch (cum),All,39135
+2015/16,7,Jan,Catch (cum),All,46721
+2015/16,8,Feb,Catch (cum),All,50097
+2015/16,9,Mar,Catch (cum),All,53084
+2015/16,10,Apr,Catch (cum),All,55711
+2015/16,11,May,Catch (cum),All,57101
+2015/16,12,Jun,Catch (cum),All,57798
+2015/16,1,Jul,CPUE,All,0.54
+2015/16,2,Aug,CPUE,All,0.67
+2015/16,3,Sep,CPUE,All,0.45
+2015/16,4,Oct,CPUE,All,0
+2015/16,5,Nov,CPUE,All,0.58
+2015/16,6,Dec,CPUE,All,0.61
+2015/16,7,Jan,CPUE,All,0.65
+2015/16,8,Feb,CPUE,All,0.5
+2015/16,9,Mar,CPUE,All,0.49
+2015/16,10,Apr,CPUE,All,0.49
+2015/16,11,May,CPUE,All,0.26
+2015/16,11,Jun,CPUE,All,0.16
