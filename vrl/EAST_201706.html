@@ -643,13 +643,15 @@
       error_data_elid_6 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        display_year_data_elid_6.push( row['display_year'] );
-        survey_data_elid_6.push( row['survey_id'] );
-        region_data_elid_6.push( row['region'] );
-        sex_data_elid_5.push( row['sex'] );
-        subgroup_data_elid_6.push( row['subgroup'] );
-        value_data_elid_6.push( Number(row['value']) );
-        error_data_elid_6.push( Number(row['error']) );
+        if (row['survey_id'] == survey_id_elid_6) {
+          display_year_data_elid_6.push( row['display_year'] );
+          survey_data_elid_6.push( row['survey_id'] );
+          region_data_elid_6.push( row['region'] );
+          sex_data_elid_6.push( row['sex'] );
+          subgroup_data_elid_6.push( row['subgroup'] );
+          value_data_elid_6.push( Number(row['value']) );
+          error_data_elid_6.push( Number(row['error']) );
+        }
       }
       display_year_list_elid_6 = display_year_data_elid_6.filter(function(item, i, ar){return ar.indexOf(item) === i;});
       unique_region_elid_6 = region_data_elid_6.filter(function(item, i, ar){return ar.indexOf(item) === i;});
@@ -666,8 +668,8 @@
       for (var i = 0; i < unique_region_elid_6.length;  i++) {
         current_region_elid_6 = unique_region_elid_6[i];
         var curr_display_years = getFilteredArray(display_year_data_elid_6, [region_data_elid_6], [current_region_elid_6]);
-        var curr_values = getFilteredArray(value_data_elid_6, [survey_data_elid_6, region_data_elid_6], [survey_id_elid_6, current_region_elid_6]);
-        var curr_errors = getFilteredArray(error_data_elid_6, [survey_data_elid_6, region_data_elid_6], [survey_id_elid_6, current_region_elid_6]);
+        var curr_values = getFilteredArray(value_data_elid_6, [region_data_elid_6], [current_region_elid_6]);
+        var curr_errors = getFilteredArray(error_data_elid_6, [region_data_elid_6], [current_region_elid_6]);
         var trace = {
           type: "scatter",
           mode: "lines",
@@ -725,37 +727,65 @@
 </div>
 <div id="elid_7" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
-    var year_data_elid_7 = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
-    var display_year_data_elid_7 = ["2001/02", "2002/03", "2003/04", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2001/02", "2002/03", "2003/04", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2001/02", "2002/03", "2003/04", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2001/02", "2002/03", "2003/04", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15"];
-    var region_data_elid_7 = ["All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All", "All"];
-    var fleet_data_elid_7 = ["Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot", "Pot"];
-    var species_data_elid_7 = ["Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster", "Lobster"];
-    var sex_data_elid_7 = ["Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male"];
-    var subgroup_data_elid_7 = ["Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile"];
-    var value_data_elid_7 = [0.149350649, 0.530373832, 0.334615385, 0.456575682, 0.703406814, 0.373115578, 0.498507463, 0.302243211, 0.319306931, 0.418699187, 0.602320675, 0.426889107, 0.533928571, 0.561538462, 0.256493506, 0.565420561, 0.408974359, 0.449131514, 0.53507014, 0.368090452, 0.371641791, 0.243211334, 0.207920792, 0.497289973, 0.69092827, 0.44357213, 0.385714286, 0.420512821, 0.022727273, 0.11682243, 0.1, 0.062034739, 0.100200401, 0.046482412, 0.076119403, 0.092089728, 0.084158416, 0.092140921, 0.127637131, 0.082433759, 0.032142857, 0.01025641, 0.048701299, 0.177570093, 0.097435897, 0.110421836, 0.200400802, 0.103015075, 0.113432836, 0.181818182, 0.188118812, 0.191056911, 0.187763713, 0.111874387, 0.021428571, 0.015384615];
-    var error_data_elid_7 = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
-    var unique_region_elid_7 = region_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_fleet_elid_7 = fleet_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_species_elid_7 = species_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_sex_elid_7 = sex_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_subgroup_elid_7 = subgroup_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var year_list_elid_7 = year_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var display_year_list_elid_7 = display_year_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var current_display_year_elid_7 = display_year_list_elid_7[0];
-    var current_region_elid_7 = unique_region_elid_7[0];
-    var current_fleet_elid_7 = unique_fleet_elid_7[0];
-    var current_species_elid_7 = unique_species_elid_7[0];
-    var current_sex_elid_7 = unique_sex_elid_7[0];
-    var current_subgroup_elid_7 = unique_subgroup_elid_7[0];
-    var ref_value_elid_7 = "average"
+    var display_year_data_elid_7 = [];
+    var survey_data_elid_7 = [];
+    var region_data_elid_7 = [];
+    var sex_data_elid_7 = [];
+    var subgroup_data_elid_7 = [];
+    var value_data_elid_7 = [];
+    var error_data_elid_7 = [];
+    var display_year_list_elid_7 = [];
+    var unique_survey_elid_7 = [];
+    var unique_region_elid_7 = [];
+    var unique_sex_elid_7 = [];
+    var unique_subgroup_elid_7 = [];
+    var current_display_year_elid_7 = "";
+    var current_survey_elid_7 = "";
+    var current_region_elid_7 = "";
+    var current_sex_elid_7 = "";
+    var current_subgroup_elid_7 = "";
+    var survey_id_elid_7 = "fixed_site";
+    var ref_value_elid_7 = "average";
+    var subgroup_elid_7 = document.querySelector("#elid_7-subgroup");
+    subgroup_elid_7.addEventListener("change", updatePlot_elid_7, false);
 
-    if (unique_subgroup_elid_7.length > 1) {
-      var subgroup_elid_7 = document.querySelector("#elid_7-subgroup");;
+    function getdata_elid_7() {
+      Plotly.d3.csv("assets/data/EAST_201706_abundance.csv", function(data){
+        processData_elid_7(data)
+      });
+    };
+    function processData_elid_7(allRows) {
+      display_year_data_elid_7 = [];
+      survey_data_elid_7 = [];
+      region_data_elid_7 = [];
+      sex_data_elid_7 = [];
+      subgroup_data_elid_7 = [];
+      value_data_elid_7 = [];
+      error_data_elid_7 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        if (row['survey_id'] == survey_id_elid_7) {
+          display_year_data_elid_7.push( row['display_year'] );
+          survey_data_elid_7.push( row['survey_id'] );
+          region_data_elid_7.push( row['region'] );
+          sex_data_elid_7.push( row['sex'] );
+          subgroup_data_elid_7.push( row['subgroup'] );
+          value_data_elid_7.push( Number(row['value']) );
+          error_data_elid_7.push( Number(row['error']) );
+        }
+      }
+      display_year_list_elid_7 = display_year_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      unique_region_elid_7 = region_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      unique_sex_elid_7 = sex_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      unique_subgroup_elid_7 = subgroup_data_elid_7.filter(function(item, i, ar){return ar.indexOf(item) === i;});
       assignOptions(unique_subgroup_elid_7, subgroup_elid_7);
-      subgroup_elid_7.addEventListener("change", updatePlot_elid_7, false);
+      current_display_year_elid_7 = display_year_list_elid_7[0];
+      current_region_elid_7 = unique_region_elid_7[0];
+      current_sex_elid_7 = unique_sex_elid_7[0];
+      current_subgroup_elid_7 = unique_subgroup_elid_7[0];
+      updatePlot_elid_7();  // Put it here to fix the asynchronous function issue
     };
 
-    updatePlot_elid_7();
     function updatePlot_elid_7(){
       current_subgroup_elid_7 = subgroup_elid_7.value;
       var data = [];
@@ -790,27 +820,27 @@
         }
         reference_shapes = [{
           type: 'line',
-      xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
-      yref: 'y',  // y-reference is assigned to the y-values
-      x0: 0,
-      y0: curr_ref,
-      x1: 1,
-      y1: curr_ref,
-      line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
-    }];
-  }
-  layout = {
-    xaxis: { title: ''},
-    yaxis: { title: 'CPUE (kg/potlift)', rangemode: 'tozero'},
-    shapes: reference_shapes,
-    showlegend: true,
-    margin: { l: 60, b: 60, r: 60, t: 40 },
-    autosize: true
-  };
-  Plotly.newPlot("elid_7", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
-};
-</script>
-
+          xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
+          yref: 'y',  // y-reference is assigned to the y-values
+          x0: 0,
+          y0: curr_ref,
+          x1: 1,
+          y1: curr_ref,
+          line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
+        }];
+      }
+      layout = {
+        xaxis: { title: ''},
+        yaxis: { title: 'CPUE (kg/potlift)', rangemode: 'tozero'},
+        shapes: reference_shapes,
+        showlegend: true,
+        margin: { l: 60, b: 60, r: 60, t: 40 },
+        autosize: true
+      };
+      Plotly.newPlot("elid_7", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
+    };
+    getdata_elid_7();
+  </script>
 </div>
 <p><br>CPUE for rock lobster caught at fisheries-independent fixed-site surveys, selectable by sex (male/female) and size (juvenile/adult). Data displayed by fishing season (Nov-Sept). These surveys use pots with escape gaps open. Dashed line is series average<br></p>
 
@@ -824,41 +854,73 @@
 </div>
 <div id="elid_8" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
-    var year_data_elid_8 = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
-    var display_year_data_elid_8 = ["2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16", "2004/05", "2005/06", "2006/07", "2007/08", "2008/09", "2009/10", "2010/11", "2011/12", "2012/13", "2013/14", "2014/15", "2015/16"];
-    var region_data_elid_8 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var fleet_data_elid_8 = ['Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot'];
-    var species_data_elid_8 = ['Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster'];
-    var sex_data_elid_8 = ["Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Female", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male"];
-    var subgroup_data_elid_8 = ["Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Adult", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile", "Juvenile"];
-    var value_data_elid_8 = [0.162180814, 0.148335745, 0.138415246, 0.166197183, 0.184222124, 0.125, 0.1, 0.246153846, 0.557471264, 0.535279805, 0.369565217, 0.455835962, 0.210144928, 0.165219489, 0.141758609, 0.230985915, 0.167915381, 0.181034483, 0.207042254, 0.234615385, 0.505747126, 0.396593674, 0.406086957, 0.271293375, 0.025189786, 0.027978775, 0.032096289, 0.008450704, 0.04583517, 0.038793103, 0.054929577, 0.092307692, 0.086206897, 0.082725061, 0.045217391, 0.017350158, 0.041752933, 0.043656536, 0.048144433, 0.028169014, 0.05068312, 0.129310345, 0.067605634, 0.086538462, 0.114942529, 0.058394161, 0.017391304, 0.022082019];
-    var error_data_elid_8 = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-    var unique_region_elid_8 = region_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_fleet_elid_8 = fleet_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_species_elid_8 = species_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_sex_elid_8 = sex_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_subgroup_elid_8 = subgroup_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var year_list_elid_8 = year_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var display_year_list_elid_8 = display_year_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var current_display_year_elid_8 = display_year_list_elid_8[0];
-    var current_region_elid_8 = unique_region_elid_8[0];
-    var current_fleet_elid_8 = unique_fleet_elid_8[0];
-    var current_species_elid_8 = unique_species_elid_8[0];
-    var current_sex_elid_8 = unique_sex_elid_8[0];
-    var current_subgroup_elid_8 = unique_subgroup_elid_8[0];
-    var subgroup_elid_8 = document.querySelector("#elid_8-subgroup");;
-    assignOptions(unique_subgroup_elid_8, subgroup_elid_8);
+    var display_year_data_elid_8 = [];
+    var survey_data_elid_8 = [];
+    var region_data_elid_8 = [];
+    var sex_data_elid_8 = [];
+    var subgroup_data_elid_8 = [];
+    var value_data_elid_8 = [];
+    var error_data_elid_8 = [];
+    var display_year_list_elid_8 = [];
+    var unique_survey_elid_8 = [];
+    var unique_region_elid_8 = [];
+    var unique_sex_elid_8 = [];
+    var unique_subgroup_elid_8 = [];
+    var current_display_year_elid_8 = "";
+    var current_survey_elid_8 = "";
+    var current_region_elid_8 = "";
+    var current_sex_elid_8 = "";
+    var current_subgroup_elid_8 = "";
+    var survey_id_elid_8 = "observer";
+    var ref_value_elid_8 = "average";
+    var subgroup_elid_8 = document.querySelector("#elid_8-subgroup");
     subgroup_elid_8.addEventListener("change", updatePlot_elid_8, false);
 
-    updatePlot_elid_8();
+    function getdata_elid_8() {
+      Plotly.d3.csv("assets/data/EAST_201706_abundance.csv", function(data){
+        processData_elid_8(data)
+      });
+    };
+    function processData_elid_8(allRows) {
+      display_year_data_elid_8 = [];
+      survey_data_elid_8 = [];
+      region_data_elid_8 = [];
+      sex_data_elid_8 = [];
+      subgroup_data_elid_8 = [];
+      value_data_elid_8 = [];
+      error_data_elid_8 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        if (row['survey_id'] == survey_id_elid_8) {
+          display_year_data_elid_8.push( row['display_year'] );
+          survey_data_elid_8.push( row['survey_id'] );
+          region_data_elid_8.push( row['region'] );
+          sex_data_elid_8.push( row['sex'] );
+          subgroup_data_elid_8.push( row['subgroup'] );
+          value_data_elid_8.push( Number(row['value']) );
+          error_data_elid_8.push( Number(row['error']) );
+        }
+      }
+      display_year_list_elid_8 = display_year_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      unique_region_elid_8 = region_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      unique_sex_elid_8 = sex_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      unique_subgroup_elid_8 = subgroup_data_elid_8.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+      assignOptions(unique_subgroup_elid_8, subgroup_elid_8);
+      current_display_year_elid_8 = display_year_list_elid_8[0];
+      current_region_elid_8 = unique_region_elid_8[0];
+      current_sex_elid_8 = unique_sex_elid_8[0];
+      current_subgroup_elid_8 = unique_subgroup_elid_8[0];
+      updatePlot_elid_8();  // Put it here to fix the asynchronous function issue
+    };
+
     function updatePlot_elid_8(){
       current_subgroup_elid_8 = subgroup_elid_8.value;
       var data = [];
       for (var i = 0; i < unique_sex_elid_8.length;  i++) {
         current_sex_elid_8 = unique_sex_elid_8[i];
-        var curr_display_years = getFilteredArray(display_year_data_elid_8, [region_data_elid_8, fleet_data_elid_8, species_data_elid_8, sex_data_elid_8, subgroup_data_elid_8], [current_region_elid_8, current_fleet_elid_8, current_species_elid_8, current_sex_elid_8, current_subgroup_elid_8]);
-        var curr_values = getFilteredArray(value_data_elid_8, [region_data_elid_8, fleet_data_elid_8, species_data_elid_8, sex_data_elid_8, subgroup_data_elid_8], [current_region_elid_8, current_fleet_elid_8, current_species_elid_8, current_sex_elid_8, current_subgroup_elid_8]);
-        var curr_errors = getFilteredArray(error_data_elid_8, [region_data_elid_8, fleet_data_elid_8, species_data_elid_8, sex_data_elid_8, subgroup_data_elid_8], [current_region_elid_8, current_fleet_elid_8, current_species_elid_8, current_sex_elid_8, current_subgroup_elid_8]);
+        var curr_display_years = getFilteredArray(display_year_data_elid_8, [sex_data_elid_8, subgroup_data_elid_8], [current_sex_elid_8, current_subgroup_elid_8]);
+        var curr_values = getFilteredArray(value_data_elid_8, [sex_data_elid_8, subgroup_data_elid_8], [current_sex_elid_8, current_subgroup_elid_8]);
+        var curr_errors = getFilteredArray(error_data_elid_8, [sex_data_elid_8, subgroup_data_elid_8], [current_sex_elid_8, current_subgroup_elid_8]);
         var trace = {
           type: "scatter",
           mode: "lines",
@@ -900,6 +962,7 @@
       };
       Plotly.newPlot("elid_8", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
     };
+    getdata_elid_8();
   </script>
 </div>
 <p><br>CPUE for rock lobster recorded by on-board observers, selectable by sex (male/female) and size (juvenile/adult). Data displayed by fishing season (Nov-Sept). These surveys use regular commercial pots with escape gaps open. Dashed line is series average.<br></p>
