@@ -82,6 +82,10 @@ function filterFloat(value) {
   return NaN;
 }
 
+function getUniques(inputArray) {
+  return inputArray.filter(function(item, i, ar){return ar.indexOf(item) === i;});
+}
+
 addEventListener('resize', function() {
   location.reload();
 });
