@@ -227,24 +227,36 @@
   <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
   <script>
     var display_year_data_elid_2 = [];
+    var display_year_tac_data_elid_2 = [];
     var region_data_elid_2 = [];
     var catch_data_elid_2 = [];
+    var tac_data_elid_2 = [];
     var unique_region_elid_2 = "";
     var current_region_elid_2 = "";
+    var catch_id_elid_2 = "catch";
+    var tac_id_elid_2 = "TAC";
     function getdata_elid_2() {
-      Plotly.d3.csv("assets/data/EAST_201706_CE_annual.csv", function(data){
+      Plotly.d3.csv("assets/data/EAST_201706_catch_TAC.csv", function(data){
         processData_elid_2(data)
       });
     };
     function processData_elid_2(allRows) {
       display_year_data_elid_2 = [];
+      display_year_tac_data_elid_2 = [];
       region_data_elid_2 = [];
       catch_data_elid_2 = [];
+      tac_data_elid_2 = [];
       for (var i=0; i<allRows.length; i++) {
         row = allRows[i];
-        display_year_data_elid_2.push( row['display_year'] );
-        region_data_elid_2.push( row['region'] );
-        catch_data_elid_2.push( Number(row['catch']) );
+        if (row['data_type'] == catch_id_elid_2) {
+          display_year_data_elid_2.push( row['display_year'] );
+          region_data_elid_2.push( row['region'] );
+          catch_data_elid_2.push( Number(row['value']) );
+        }
+        if (row['data_type'] == tac_id_elid_2) {
+          display_year_tac_data_elid_2.push( row['display_year'] );
+          tac_data_elid_2.push( Number(row['value']) );
+        }
       }
       unique_region_elid_2 = getUniques(region_data_elid_2);
       current_region_elid_2 = unique_region_elid_2[0];
@@ -255,6 +267,7 @@
       // build traces according to grouping selector (Region)
       trace_name_array = unique_region_elid_2;
       trace_y_array = region_data_elid_2
+      // iterate through regions, stacking traces
       for (var i = 0; i < trace_name_array.length;  i++) {
         var trace = {
           type: "bar",
@@ -268,6 +281,20 @@
         };
         data.push(trace);
       };
+      // add a trace for TAC data
+     var trace = {
+        type: "scatter",
+        mode: "lines",
+        name: "TAC",
+        x: display_year_tac_data_elid_2,
+        y: tac_data_elid_2,
+        line: {
+          shape: 'hvh',
+          color: "DarkCrimson",
+          width: 2
+        },
+      };
+      data.push(trace);
       layout = {
         barmode: "stack",
         xaxis: {
@@ -316,7 +343,7 @@
 <div id="table_TAC" style="width: 960px;">
   <script type="text/javascript">
     CsvToHtmlTable.init({
-      csv_path: 'assets/data/EAST_201706_TAC.csv',
+      csv_path: 'assets/data/EAST_201706_TAC_table.csv',
       element: 'table_TAC',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
