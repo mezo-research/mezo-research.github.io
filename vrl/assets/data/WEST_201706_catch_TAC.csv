@@ -1,0 +1,122 @@
+display_year,year_type,region,data_type,value
+1978/79,fin,Apollo Bay,catch,142697
+1979/80,fin,Apollo Bay,catch,136909
+1980/81,fin,Apollo Bay,catch,122364
+1981/82,fin,Apollo Bay,catch,137929
+1982/83,fin,Apollo Bay,catch,136671
+1983/84,fin,Apollo Bay,catch,104756
+1984/85,fin,Apollo Bay,catch,111414
+1985/86,fin,Apollo Bay,catch,103024
+1986/87,fin,Apollo Bay,catch,100550
+1987/88,fin,Apollo Bay,catch,74914
+1988/89,fin,Apollo Bay,catch,93210
+1989/90,fin,Apollo Bay,catch,81530
+1990/91,fin,Apollo Bay,catch,71873
+1991/92,fin,Apollo Bay,catch,67535
+1992/93,fin,Apollo Bay,catch,88426
+1993/94,fin,Apollo Bay,catch,120897
+1994/95,fin,Apollo Bay,catch,106519
+1995/96,fin,Apollo Bay,catch,75255
+1996/97,fin,Apollo Bay,catch,86009
+1997/98,fin,Apollo Bay,catch,106258
+1998/99,fin,Apollo Bay,catch,96967
+1999/00,fin,Apollo Bay,catch,100954
+2000/01,fin,Apollo Bay,catch,118556
+2001/02,fin,Apollo Bay,catch,97313
+2002/03,fin,Apollo Bay,catch,90714
+2003/04,fin,Apollo Bay,catch,94753
+2004/05,fin,Apollo Bay,catch,73008
+2005/06,fin,Apollo Bay,catch,48112
+2006/07,fin,Apollo Bay,catch,65011
+2007/08,fin,Apollo Bay,catch,58040
+2008/09,fin,Apollo Bay,catch,50419
+2009/10,fin,Apollo Bay,catch,44937
+2010/11,fin,Apollo Bay,catch,42615
+2011/12,fin,Apollo Bay,catch,48056
+2012/13,fin,Apollo Bay,catch,54248
+2013/14,fin,Apollo Bay,catch,48452
+2014/15,fin,Apollo Bay,catch,40096
+2015/16,fin,Apollo Bay,catch,51018
+1978/79,fin,Warrnambool,catch,143448
+1979/80,fin,Warrnambool,catch,140935
+1980/81,fin,Warrnambool,catch,116028
+1981/82,fin,Warrnambool,catch,111701
+1982/83,fin,Warrnambool,catch,92037
+1983/84,fin,Warrnambool,catch,124345
+1984/85,fin,Warrnambool,catch,114314
+1985/86,fin,Warrnambool,catch,85806
+1986/87,fin,Warrnambool,catch,84449
+1987/88,fin,Warrnambool,catch,118933
+1988/89,fin,Warrnambool,catch,67236
+1989/90,fin,Warrnambool,catch,64715
+1990/91,fin,Warrnambool,catch,65936
+1991/92,fin,Warrnambool,catch,94590
+1992/93,fin,Warrnambool,catch,102296
+1993/94,fin,Warrnambool,catch,103782
+1994/95,fin,Warrnambool,catch,89140
+1995/96,fin,Warrnambool,catch,82103
+1996/97,fin,Warrnambool,catch,86889
+1997/98,fin,Warrnambool,catch,84054
+1998/99,fin,Warrnambool,catch,159578
+1999/00,fin,Warrnambool,catch,125455
+2000/01,fin,Warrnambool,catch,140398
+2001/02,fin,Warrnambool,catch,112396
+2002/03,fin,Warrnambool,catch,102461
+2003/04,fin,Warrnambool,catch,95049
+2004/05,fin,Warrnambool,catch,111242
+2005/06,fin,Warrnambool,catch,111459
+2006/07,fin,Warrnambool,catch,87636
+2007/08,fin,Warrnambool,catch,86051
+2008/09,fin,Warrnambool,catch,75314
+2009/10,fin,Warrnambool,catch,69410
+2010/11,fin,Warrnambool,catch,56168
+2011/12,fin,Warrnambool,catch,56754
+2012/13,fin,Warrnambool,catch,72858
+2013/14,fin,Warrnambool,catch,81309
+2014/15,fin,Warrnambool,catch,86086
+2015/16,fin,Warrnambool,catch,78426
+1978/79,fin,Portland,catch,239581
+1979/80,fin,Portland,catch,221192
+1980/81,fin,Portland,catch,353739
+1981/82,fin,Portland,catch,281789
+1982/83,fin,Portland,catch,263520
+1983/84,fin,Portland,catch,225943
+1984/85,fin,Portland,catch,189757
+1985/86,fin,Portland,catch,174285
+1986/87,fin,Portland,catch,194938
+1987/88,fin,Portland,catch,200898
+1988/89,fin,Portland,catch,174960
+1989/90,fin,Portland,catch,202034
+1990/91,fin,Portland,catch,183476
+1991/92,fin,Portland,catch,250391
+1992/93,fin,Portland,catch,218092
+1993/94,fin,Portland,catch,234015
+1994/95,fin,Portland,catch,248993
+1995/96,fin,Portland,catch,267100
+1996/97,fin,Portland,catch,228136
+1997/98,fin,Portland,catch,267645
+1998/99,fin,Portland,catch,253508
+1999/00,fin,Portland,catch,281222
+2000/01,fin,Portland,catch,286578
+2001/02,fin,Portland,catch,233789
+2002/03,fin,Portland,catch,244045
+2003/04,fin,Portland,catch,265390
+2004/05,fin,Portland,catch,241506
+2005/06,fin,Portland,catch,209411
+2006/07,fin,Portland,catch,199649
+2007/08,fin,Portland,catch,176995
+2008/09,fin,Portland,catch,115351
+2009/10,fin,Portland,catch,115992
+2010/11,fin,Portland,catch,136570
+2011/12,fin,Portland,catch,138982
+2012/13,fin,Portland,catch,139739
+2013/14,fin,Portland,catch,142253
+2014/15,fin,Portland,catch,105499
+2015/16,fin,Portland,catch,100565
+2009/10,fin,All,TAC,240000
+2010/11,fin,All,TAC,240000
+2011/12,fin,All,TAC,240000
+2012/13,fin,All,TAC,260000
+2013/14,fin,All,TAC,260000
+2014/15,fin,All,TAC,230000
+2015/16,fin,All,TAC,230000

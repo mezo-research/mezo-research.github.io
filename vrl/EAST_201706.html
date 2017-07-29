@@ -66,9 +66,9 @@
       <div role="tabpanel" class="tab-pane active" id="annual">
         <br>
         <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-          <br><h4 align="center">
-            Commercial Catch by Zone
-          </h4>
+        <br><h4 align="center">
+          Commercial Catch by Zone
+        </h4>
         <div class="control-row">
           Plot variable: <select id="map-pane-selector"></select> </br></br>
         </div>
@@ -218,9 +218,9 @@
       <p><br>Spatial breakdown of key fishery statistics in the current fishing season. Selectable as total commercial catch, fishing effort or standardised CPUE. Colour shading is weighted relative to each indicator. Top right hand box displays detailed information.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Commercial Catch History
-  </h4>
+<br><h4 align="center">
+  Commercial Catch History
+</h4>
 <div id="elid_2" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
   <script>
@@ -327,16 +327,21 @@
       element: 'elid_2_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ]]
+      }
     });
   </script>
 </div>
 <p><br>Total annual catch (kg) in the Rock Lobster Eastern Zone fishery from 1978/79 to present, displayed by financial year. Horizontal line indicates the Total Allowable Catch (TAC) between 2009/10 and present. TAC was introduced to the fishery in 2001/02, but for the first eight years was based on fishing season (Nov-Sept) and not financial year.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Historical TAC Data
-  </h4>
+<br><h4 align="center">
+  Historical TAC Data
+</h4>
 <div id="table_TAC" style="width: 960px;">
   <script type="text/javascript">
     CsvToHtmlTable.init({
@@ -344,15 +349,20 @@
       element: 'table_TAC',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 0, "asc" ]]}
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 0, "asc" ]]
+      }
     });
   </script>
 </div>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Annual Catch / Effort Data
-  </h4>
+<br><h4 align="center">
+  Annual Catch / Effort Data
+</h4>
 <div class="control-row">
   Region: <select id="elid_3-region"></select>
 </div>
@@ -476,36 +486,36 @@
       element: 'elid_3_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 2, "asc" ]]}
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]}
     });
   </script>
 </div>
 <p><br>Total annual catch (tonnes) and effort (# pot lifts) selectable by region (Queenscliff, San Remo and Lakes Entrance) and for all of fishery. Data displayed by fishing season (Nov-Sept).<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Length Frequency Distribution
-  </h4>
+<br><h4 align="center">
+  Length Frequency Distribution
+</h4>
 <div class="control-row">
   Year: <select id="elid_5-display-year"></select> Survey: <select id="elid_5-survey"></select> Sex: <select id="elid_5-sex"></select>
 </div>
 <div id="elid_5" style="height: 320px; width: 960px;" class="plotly-graph-div">
-
 </div>
 <div id="elid_5a" style="height: 320px; width: 960px;" class="plotly-graph-div">
-
 </div>
 <div id="elid_5b" style="height: 320px; width: 960px;" class="plotly-graph-div">
-
 </div>
 <div id="elid_5c" style="height: 320px; width: 960px;" class="plotly-graph-div">
-
 </div>
-
   <script>
     var display_year_data_elid_5 = [];
     var survey_data_elid_5 = [];
     var sex_data_elid_5 = [];
+    var sample_data_elid_5 = [];
     var effort_data_elid_5 = [];
     var bin_data_elid_5 = [];
     var count_data_elid_5 = [];
@@ -533,6 +543,7 @@
       display_year_data_elid_5 = [];
       survey_data_elid_5 = [];
       sex_data_elid_5 = [];
+      sample_data_elid_5 = [];
       effort_data_elid_5 = [];
       bin_data_elid_5 = [];
       count_data_elid_5 = [];
@@ -541,7 +552,8 @@
         display_year_data_elid_5.push( row['display_year'] );
         survey_data_elid_5.push( row['survey_id'] );
         sex_data_elid_5.push( row['sex'] );
-        effort_data_elid_5.push( Number(row['sample_size']) );
+        sample_data_elid_5.push( Number(row['sample_size']) );
+        effort_data_elid_5.push( Number(row['effort']) );
         bin_data_elid_5.push( Number(row['bin']) );
         count_data_elid_5.push( Number(row['count']) );
       }
@@ -682,9 +694,12 @@
 <p><br>Length frequency of rock lobsters sampled in the observer and fixed-site surveys. Displays four sequential years, with most recent year selected under the "Year" dropdown. Selectable by sex (male/female) and survey type (observer/fixed-site). Dashed line is legal minimum length.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Average Weight
-  </h4>
+<br><h4 align="center">
+  Average Weight
+</h4>
+<div class="control-row">
+
+</div>
 <div id="elid_6" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_6 = [];
@@ -786,16 +801,21 @@
       element: 'elid_6_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ]]
+      }
     });
   </script>
 </div>
 <p><br>Average weight in kg of rock lobster caught each fishing season (Nov-Sept), selectable by region (Queenscliff, San Remo and Lakes Entrance) and for all of fishery. Dashed line is series average.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Fixed Site Survey
-  </h4>
+<br><h4 align="center">
+  Fixed Site Survey
+</h4>
 <div class="control-row">
   Subgroup: <select id="elid_7-subgroup"></select>
 </div>
@@ -924,16 +944,21 @@
       element: 'elid_7_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ]]
+      }
     });
   </script>
 </div>
 <p><br>CPUE for rock lobster caught at fisheries-independent fixed-site surveys, selectable by sex (male/female) and size (juvenile/adult). Data displayed by fishing season (Nov-Sept). These surveys use pots with escape gaps open. Dashed line is series average<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Observer Survey
-  </h4>
+<br><h4 align="center">
+  Observer Survey
+</h4>
 <div class="control-row">
   Subgroup: <select id="elid_8-subgroup"></select>
 </div>
@@ -1057,7 +1082,12 @@
       element: 'elid_8_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false, "searching": false, "autoWidth": false, "order": [[ 1, "asc" ]]}
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ]]
+      }
     });
   </script>
 </div>
@@ -1067,9 +1097,9 @@
 <div role="tabpanel" class="tab-pane" id="monthly">
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Monthly Data Trends
-  </h4>
+<br><h4 align="center">
+  Monthly Data Trends
+</h4>
 <div class="control-row">
   Plot variable: <select id="elid_1-survey"></select>
 </div>
@@ -1087,6 +1117,7 @@
     var month_seq_list_elid_1 = [];
     var month_list_elid_1 = [];
     var current_survey_elid_1 = "";
+    var ref_tac_elid_1 = 59000;
     var survey_elid_1 = document.querySelector("#elid_1-survey");
     survey_elid_1.addEventListener("change", updatePlot_elid_1, false);
 
@@ -1152,16 +1183,15 @@
         data.push(trace);
       }
       var reference_shapes = [];
-      var ref_tac = 59000;
       if (current_survey_elid_1 == "Catch (cum)") {
         reference_shapes = [{
           type: 'line',
           xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
           yref: 'y',  // y-reference is assigned to the y-values
           x0: 0,
-          y0: ref_tac,
+          y0: ref_tac_elid_1,
           x1: 1,
-          y1: ref_tac,
+          y1: ref_tac_elid_1,
           line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
         }];
       }
@@ -1208,9 +1238,9 @@
 <div role="tabpanel" class="tab-pane" id="models">
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
-  <br><h4 align="center">
-    Standardised CPUE
-  </h4>
+<br><h4 align="center">
+  Standardised CPUE
+</h4>
 <div id="elid_9" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
     var display_year_data_elid_9 = [];

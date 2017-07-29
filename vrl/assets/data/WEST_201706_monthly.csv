@@ -1,0 +1,70 @@
+display_year,month_seq,month,survey_id,region,value
+2016/17,1,Jul,Catch,All,6435
+2016/17,2,Aug,Catch,All,25889
+2016/17,3,Sep,Catch,All,10912
+2016/17,4,Oct,Catch,All,0
+2016/17,5,Nov,Catch,All,15819
+2016/17,6,Dec,Catch,All,41918
+2016/17,7,Jan,Catch,All,43708
+2016/17,8,Feb,Catch,All,18171
+2016/17,9,Mar,Catch,All,22373
+2016/17,10,Apr,Catch,All,16607
+2016/17,11,May,Catch,All,6293
+2016/17,1,Jul,Catch (cum),All,6435
+2016/17,2,Aug,Catch (cum),All,32324
+2016/17,3,Sep,Catch (cum),All,43236
+2016/17,4,Oct,Catch (cum),All,43236
+2016/17,5,Nov,Catch (cum),All,59055
+2016/17,6,Dec,Catch (cum),All,100973
+2016/17,7,Jan,Catch (cum),All,144681
+2016/17,8,Feb,Catch (cum),All,162852
+2016/17,9,Mar,Catch (cum),All,185225
+2016/17,10,Apr,Catch (cum),All,201832
+2016/17,11,May,Catch (cum),All,208125
+2016/17,1,Jul,CPUE,All,0.33
+2016/17,2,Aug,CPUE,All,0.48
+2016/17,3,Sep,CPUE,All,0.48
+2016/17,4,Oct,CPUE,All,0
+2016/17,5,Nov,CPUE,All,0.6
+2016/17,6,Dec,CPUE,All,0.8
+2016/17,7,Jan,CPUE,All,0.83
+2016/17,8,Feb,CPUE,All,0.65
+2016/17,9,Mar,CPUE,All,0.69
+2016/17,10,Apr,CPUE,All,0.68
+2016/17,11,May,CPUE,All,0.47
+2015/16,1,Jul,Catch,All,7401
+2015/16,2,Aug,Catch,All,22587
+2015/16,3,Sep,Catch,All,15644
+2015/16,4,Oct,Catch,All,0
+2015/16,5,Nov,Catch,All,14419
+2015/16,6,Dec,Catch,All,47935
+2015/16,7,Jan,Catch,All,40933
+2015/16,8,Feb,Catch,All,39996
+2015/16,9,Mar,Catch,All,30252
+2015/16,10,Apr,Catch,All,9138
+2015/16,11,May,Catch,All,3089
+2015/16,12,Jun,Catch,All,858
+2015/16,1,Jul,Catch (cum),All,7401
+2015/16,2,Aug,Catch (cum),All,29988
+2015/16,3,Sep,Catch (cum),All,45632
+2015/16,4,Oct,Catch (cum),All,45632
+2015/16,5,Nov,Catch (cum),All,60051
+2015/16,6,Dec,Catch (cum),All,107986
+2015/16,7,Jan,Catch (cum),All,148919
+2015/16,8,Feb,Catch (cum),All,188915
+2015/16,9,Mar,Catch (cum),All,219167
+2015/16,10,Apr,Catch (cum),All,228305
+2015/16,11,May,Catch (cum),All,231394
+2015/16,12,Jun,Catch (cum),All,232252
+2015/16,1,Jul,CPUE,All,0.28
+2015/16,2,Aug,CPUE,All,0.44
+2015/16,3,Sep,CPUE,All,0.51
+2015/16,4,Oct,CPUE,All,0
+2015/16,5,Nov,CPUE,All,0.61
+2015/16,6,Dec,CPUE,All,0.89
+2015/16,7,Jan,CPUE,All,0.77
+2015/16,8,Feb,CPUE,All,0.71
+2015/16,9,Mar,CPUE,All,0.68
+2015/16,10,Apr,CPUE,All,0.5
+2015/16,11,May,CPUE,All,0.5
+2015/16,12,Jun,CPUE,All,0.23

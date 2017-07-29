@@ -1,0 +1,241 @@
+display_year,region,subgroup,sex,value
+2001/02,All,Adult,Female,0.482280431
+2002/03,All,Adult,Female,0.491335942
+2003/04,All,Adult,Female,0.462032086
+2004/05,All,Adult,Female,0.435546875
+2005/06,All,Adult,Female,0.314300152
+2006/07,All,Adult,Female,0.372265786
+2007/08,All,Adult,Female,0.291852452
+2008/09,All,Adult,Female,0.264354067
+2009/10,All,Adult,Female,0.234660926
+2010/11,All,Adult,Female,0.282733224
+2011/12,All,Adult,Female,0.318918919
+2012/13,All,Adult,Female,0.335279399
+2013/14,All,Adult,Female,0.4437944
+2014/15,All,Adult,Female,0.326017375
+2015/16,All,Adult,Female,0.351004016
+2001/02,All,Adult,Male,0.687211094
+2002/03,All,Adult,Male,0.591950811
+2003/04,All,Adult,Male,0.557219251
+2004/05,All,Adult,Male,0.457519531
+2005/06,All,Adult,Male,0.341081354
+2006/07,All,Adult,Male,0.410647957
+2007/08,All,Adult,Male,0.391974058
+2008/09,All,Adult,Male,0.421052632
+2009/10,All,Adult,Male,0.307857912
+2010/11,All,Adult,Male,0.470949264
+2011/12,All,Adult,Male,0.561330561
+2012/13,All,Adult,Male,0.56088407
+2013/14,All,Adult,Male,0.508984538
+2014/15,All,Adult,Male,0.345221765
+2015/16,All,Adult,Male,0.379116466
+2001/02,All,Juvenile,Female,1.71443246
+2002/03,All,Juvenile,Female,1.585243153
+2003/04,All,Juvenile,Female,1.202139037
+2004/05,All,Juvenile,Female,1.143554688
+2005/06,All,Juvenile,Female,1.085396665
+2006/07,All,Juvenile,Female,1.12794057
+2007/08,All,Juvenile,Female,0.791244426
+2008/09,All,Juvenile,Female,0.942185008
+2009/10,All,Juvenile,Female,1.014711159
+2010/11,All,Juvenile,Female,1.155482815
+2011/12,All,Juvenile,Female,0.976715177
+2012/13,All,Juvenile,Female,0.930775646
+2013/14,All,Juvenile,Female,0.696615127
+2014/15,All,Juvenile,Female,0.477366255
+2015/16,All,Juvenile,Female,0.477108434
+2001/02,All,Juvenile,Male,1.33076528
+2002/03,All,Juvenile,Male,1.261598658
+2003/04,All,Juvenile,Male,0.937967914
+2004/05,All,Juvenile,Male,0.848144531
+2005/06,All,Juvenile,Male,0.933299646
+2006/07,All,Juvenile,Male,0.915806851
+2007/08,All,Juvenile,Male,0.5804621
+2008/09,All,Juvenile,Male,0.774322169
+2009/10,All,Juvenile,Male,0.874058127
+2010/11,All,Juvenile,Male,0.996726678
+2011/12,All,Juvenile,Male,0.717255717
+2012/13,All,Juvenile,Male,0.580483736
+2013/14,All,Juvenile,Male,0.474717927
+2014/15,All,Juvenile,Male,0.37037037
+2015/16,All,Juvenile,Male,0.375100402
+2001/02,Apollo Bay,Adult,Female,0.74433657
+2002/03,Apollo Bay,Adult,Female,0.961130742
+2003/04,Apollo Bay,Adult,Female,0.843678161
+2004/05,Apollo Bay,Adult,Female,0.671403197
+2005/06,Apollo Bay,Adult,Female,0.542435424
+2006/07,Apollo Bay,Adult,Female,0.589219331
+2007/08,Apollo Bay,Adult,Female,0.46025878
+2008/09,Apollo Bay,Adult,Female,0.346405229
+2009/10,Apollo Bay,Adult,Female,0.322203673
+2010/11,Apollo Bay,Adult,Female,0.432612313
+2011/12,Apollo Bay,Adult,Female,0.473333333
+2012/13,Apollo Bay,Adult,Female,0.421666667
+2013/14,Apollo Bay,Adult,Female,0.65
+2014/15,Apollo Bay,Adult,Female,0.396666667
+2015/16,Apollo Bay,Adult,Female,0.516975309
+2001/02,Apollo Bay,Adult,Male,0.974110032
+2002/03,Apollo Bay,Adult,Male,0.844522968
+2003/04,Apollo Bay,Adult,Male,0.740229885
+2004/05,Apollo Bay,Adult,Male,0.559502664
+2005/06,Apollo Bay,Adult,Male,0.477859779
+2006/07,Apollo Bay,Adult,Male,0.513011152
+2007/08,Apollo Bay,Adult,Male,0.46025878
+2008/09,Apollo Bay,Adult,Male,0.336601307
+2009/10,Apollo Bay,Adult,Male,0.293823038
+2010/11,Apollo Bay,Adult,Male,0.622296173
+2011/12,Apollo Bay,Adult,Male,0.618333333
+2012/13,Apollo Bay,Adult,Male,0.638333333
+2013/14,Apollo Bay,Adult,Male,0.648333333
+2014/15,Apollo Bay,Adult,Male,0.466666667
+2015/16,Apollo Bay,Adult,Male,0.461419753
+2001/02,Apollo Bay,Juvenile,Female,1.566343042
+2002/03,Apollo Bay,Juvenile,Female,1.169611307
+2003/04,Apollo Bay,Juvenile,Female,0.926436782
+2004/05,Apollo Bay,Juvenile,Female,0.772646536
+2005/06,Apollo Bay,Juvenile,Female,0.645756458
+2006/07,Apollo Bay,Juvenile,Female,0.986988848
+2007/08,Apollo Bay,Juvenile,Female,0.898336414
+2008/09,Apollo Bay,Juvenile,Female,0.735294118
+2009/10,Apollo Bay,Juvenile,Female,0.729549249
+2010/11,Apollo Bay,Juvenile,Female,0.886855241
+2011/12,Apollo Bay,Juvenile,Female,0.768333333
+2012/13,Apollo Bay,Juvenile,Female,0.696666667
+2013/14,Apollo Bay,Juvenile,Female,0.415
+2014/15,Apollo Bay,Juvenile,Female,0.241666667
+2015/16,Apollo Bay,Juvenile,Female,0.200617284
+2001/02,Apollo Bay,Juvenile,Male,0.925566343
+2002/03,Apollo Bay,Juvenile,Male,0.964664311
+2003/04,Apollo Bay,Juvenile,Male,0.862068966
+2004/05,Apollo Bay,Juvenile,Male,0.472468917
+2005/06,Apollo Bay,Juvenile,Male,0.595940959
+2006/07,Apollo Bay,Juvenile,Male,0.882899628
+2007/08,Apollo Bay,Juvenile,Male,0.643253235
+2008/09,Apollo Bay,Juvenile,Male,0.602941176
+2009/10,Apollo Bay,Juvenile,Male,0.651085142
+2010/11,Apollo Bay,Juvenile,Male,0.800332779
+2011/12,Apollo Bay,Juvenile,Male,0.59
+2012/13,Apollo Bay,Juvenile,Male,0.421666667
+2013/14,Apollo Bay,Juvenile,Male,0.328333333
+2014/15,Apollo Bay,Juvenile,Male,0.206666667
+2015/16,Apollo Bay,Juvenile,Male,0.13117284
+2001/02,Portland,Adult,Female,0.563535912
+2002/03,Portland,Adult,Female,0.511029412
+2003/04,Portland,Adult,Female,0.454880295
+2004/05,Portland,Adult,Female,0.55904059
+2005/06,Portland,Adult,Female,0.31938326
+2006/07,Portland,Adult,Female,0.32
+2007/08,Portland,Adult,Female,0.285714286
+2008/09,Portland,Adult,Female,0.200445434
+2009/10,Portland,Adult,Female,0.186514886
+2010/11,Portland,Adult,Female,0.268639053
+2011/12,Portland,Adult,Female,0.22484472
+2012/13,Portland,Adult,Female,0.213114754
+2013/14,Portland,Adult,Female,0.20875
+2014/15,Portland,Adult,Female,0.171768707
+2015/16,Portland,Adult,Female,0.221092757
+2001/02,Portland,Adult,Male,0.82320442
+2002/03,Portland,Adult,Male,0.683823529
+2003/04,Portland,Adult,Male,0.67771639
+2004/05,Portland,Adult,Male,0.63099631
+2005/06,Portland,Adult,Male,0.440528634
+2006/07,Portland,Adult,Male,0.551428571
+2007/08,Portland,Adult,Male,0.396656535
+2008/09,Portland,Adult,Male,0.320712695
+2009/10,Portland,Adult,Male,0.26882662
+2010/11,Portland,Adult,Male,0.41183432
+2011/12,Portland,Adult,Male,0.347826087
+2012/13,Portland,Adult,Male,0.268600252
+2013/14,Portland,Adult,Male,0.235
+2014/15,Portland,Adult,Male,0.18537415
+2015/16,Portland,Adult,Male,0.32909784
+2001/02,Portland,Juvenile,Female,2.121546961
+2002/03,Portland,Juvenile,Female,1.801470588
+2003/04,Portland,Juvenile,Female,1.355432781
+2004/05,Portland,Juvenile,Female,1.717712177
+2005/06,Portland,Juvenile,Female,1.859030837
+2006/07,Portland,Juvenile,Female,1.555714286
+2007/08,Portland,Juvenile,Female,0.925531915
+2008/09,Portland,Juvenile,Female,0.822939866
+2009/10,Portland,Juvenile,Female,0.790718039
+2010/11,Portland,Juvenile,Female,1.033136095
+2011/12,Portland,Juvenile,Female,0.590062112
+2012/13,Portland,Juvenile,Female,0.355611602
+2013/14,Portland,Juvenile,Female,0.33625
+2014/15,Portland,Juvenile,Female,0.292517007
+2015/16,Portland,Juvenile,Female,0.749682338
+2001/02,Portland,Juvenile,Male,1.913443831
+2002/03,Portland,Juvenile,Male,1.422794118
+2003/04,Portland,Juvenile,Male,1.031307551
+2004/05,Portland,Juvenile,Male,1.494464945
+2005/06,Portland,Juvenile,Male,1.762114537
+2006/07,Portland,Juvenile,Male,1.297142857
+2007/08,Portland,Juvenile,Male,0.76443769
+2008/09,Portland,Juvenile,Male,0.85077951
+2009/10,Portland,Juvenile,Male,0.737302977
+2010/11,Portland,Juvenile,Male,1.015384615
+2011/12,Portland,Juvenile,Male,0.535403727
+2012/13,Portland,Juvenile,Male,0.340479193
+2013/14,Portland,Juvenile,Male,0.32875
+2014/15,Portland,Juvenile,Male,0.362244898
+2015/16,Portland,Juvenile,Male,0.711562897
+2001/02,Warrnambool,Adult,Female,0.465357968
+2002/03,Warrnambool,Adult,Female,0.438082557
+2003/04,Warrnambool,Adult,Female,0.314465409
+2004/05,Warrnambool,Adult,Female,0.305797101
+2005/06,Warrnambool,Adult,Female,0.264450867
+2006/07,Warrnambool,Adult,Female,0.45465995
+2007/08,Warrnambool,Adult,Female,0.350247525
+2008/09,Warrnambool,Adult,Female,0.279381443
+2009/10,Warrnambool,Adult,Female,0.24750499
+2010/11,Warrnambool,Adult,Female,0.204613842
+2011/12,Warrnambool,Adult,Female,0.302908726
+2012/13,Warrnambool,Adult,Female,0.380478088
+2013/14,Warrnambool,Adult,Female,0.509072581
+2014/15,Warrnambool,Adult,Female,0.374
+2015/16,Warrnambool,Adult,Female,0.364635365
+2001/02,Warrnambool,Adult,Male,0.681293303
+2002/03,Warrnambool,Adult,Male,0.596537949
+2003/04,Warrnambool,Adult,Male,0.442767296
+2004/05,Warrnambool,Adult,Male,0.405797101
+2005/06,Warrnambool,Adult,Male,0.312138728
+2006/07,Warrnambool,Adult,Male,0.419395466
+2007/08,Warrnambool,Adult,Male,0.565594059
+2008/09,Warrnambool,Adult,Male,0.579381443
+2009/10,Warrnambool,Adult,Male,0.374251497
+2010/11,Warrnambool,Adult,Male,0.430290873
+2011/12,Warrnambool,Adult,Male,0.70110331
+2012/13,Warrnambool,Adult,Male,0.746015936
+2013/14,Warrnambool,Adult,Male,0.646169355
+2014/15,Warrnambool,Adult,Male,0.366
+2015/16,Warrnambool,Adult,Male,0.385614386
+2001/02,Warrnambool,Juvenile,Female,1.965357968
+2002/03,Warrnambool,Juvenile,Female,2.030625832
+2003/04,Warrnambool,Juvenile,Female,1.394968553
+2004/05,Warrnambool,Juvenile,Female,1.414492754
+2005/06,Warrnambool,Juvenile,Female,1.378612717
+2006/07,Warrnambool,Juvenile,Female,1.401763224
+2007/08,Warrnambool,Juvenile,Female,1.060643564
+2008/09,Warrnambool,Juvenile,Female,1.210309278
+2009/10,Warrnambool,Juvenile,Female,1.48502994
+2010/11,Warrnambool,Juvenile,Female,1.4222668
+2011/12,Warrnambool,Juvenile,Female,1.417251755
+2012/13,Warrnambool,Juvenile,Female,1.525896414
+2013/14,Warrnambool,Juvenile,Female,1.158266129
+2014/15,Warrnambool,Juvenile,Female,0.727
+2015/16,Warrnambool,Juvenile,Female,0.467532468
+2001/02,Warrnambool,Juvenile,Male,1.461893764
+2002/03,Warrnambool,Juvenile,Male,1.611185087
+2003/04,Warrnambool,Juvenile,Male,1.030188679
+2004/05,Warrnambool,Juvenile,Male,0.957971014
+2005/06,Warrnambool,Juvenile,Male,1.046242775
+2006/07,Warrnambool,Juvenile,Male,1.052896725
+2007/08,Warrnambool,Juvenile,Male,0.719059406
+2008/09,Warrnambool,Juvenile,Male,0.834020619
+2009/10,Warrnambool,Juvenile,Male,1.201596806
+2010/11,Warrnambool,Juvenile,Male,1.101303912
+2011/12,Warrnambool,Juvenile,Male,0.942828485
+2012/13,Warrnambool,Juvenile,Male,0.865537849
+2013/14,Warrnambool,Juvenile,Male,0.681451613
+2014/15,Warrnambool,Juvenile,Male,0.473
+2015/16,Warrnambool,Juvenile,Male,0.288711289
