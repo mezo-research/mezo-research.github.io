@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    VFA: Rock Lobster West
+  </title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <!-- Extra style sheets -->
+  <link href="assets/css/toolkit-light.css" rel="stylesheet">
+  <link href="assets/css/application.css" rel="stylesheet">
+
+  <!-- extra assets (css, img) links -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+
+  <style>
+    .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+    .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+  </style>
+
+  <!-- extra header javascript -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="assets/js/plotly-latest.min.js"></script>
+  <script src="assets/js/flowReport.js"></script>
+
+  <script type="text/javascript" src="assets/js/jquery.csv.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="assets/js/dataTables.bootstrap.js"></script>
+  <script type="text/javascript" src="assets/js/csv_to_html_table.js"></script>
+</head>
+
+<!--<body data-spy="scroll" data-target="#subnav" data-offset="40">-->
+<body data-offset="40">
+  <div id="messages">
+  </div>
+  <div class="container">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Demo</h6>
+        <h3 class="dashhead-title">Length-based modelling</h3>
+      </div>
+    </div>
+    <br>
+    <p>This page shows preliminary outputs of the length-based assessment model. Simulated data has been used to test the model during its development. This allows us to assess the performance of the model in estimating a wide range of biological system attributes, while knowing the "true" value that the estimation should give.
+
+    Please note that the model is still in development.
+    </p>
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+<br><h4 align="center">
+  Spawning Stock Biomass
+</h4>
+<div class="control-row">
+
+</div>
+
+<div id="elid_1" style="height: 450px; width: 960px;" class="plotly-graph-div">
+  <script>
+    var year_data_elid_1 = [];
+    var ssb_data_elid_1 = [];
+    var ssb_est_data_elid_1 = [];
+    var ci_up_data_elid_1 = [];
+    var ci_low_data_elid_1 = [];
+
+    function getdata_elid_1() {
+      Plotly.d3.csv("assets/data/MODEL_ssb_est.csv", function(data){
+        processData_elid_1(data)
+      });
+    };
+    function processData_elid_1(allRows) {
+      year_data_elid_1 = [];
+      ssb_data_elid_1 = [];
+      ssb_est_data_elid_1 = [];
+      ci_up_data_elid_1 = [];
+      ci_low_data_elid_1 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        year_data_elid_1.push( row['year'] );
+        ssb_data_elid_1.push( Number(row['ssb_actual']) );
+        ssb_est_data_elid_1.push( Number(row['ssb_est']) );
+        ci_up_data_elid_1.push( Number(row['ci_up']) );
+        ci_low_data_elid_1.push( Number(row['ci_low']) );
+      }
+      updatePlot_elid_1();  // Put it here to fix the asynchronous function issue
+    };
+
+    function updatePlot_elid_1(){
+      var data = [];
+      var trace1 = {
+        name: "SSB_actual",
+        type: "scatter",
+        mode: "lines",
+        x: year_data_elid_1,
+        y: ssb_data_elid_1,
+        line: {
+          color: "DarkSlateGrey",
+          width: 3
+        }
+      };
+      var trace2 = {
+        name: "SSB_est",
+        type: "scatter",
+        mode: "lines",
+        x: year_data_elid_1,
+        y: ssb_est_data_elid_1,
+        line: {
+          color: "RoyalBlue",
+          width: 2
+        }
+      };
+      var trace3 = {
+        name: "CI_upper",
+        type: "scatter",
+        mode: "lines",
+        x: year_data_elid_1,
+        y: ci_up_data_elid_1,
+        line: {
+          color: "Grey",
+          width: 1,
+          dash: "dash"
+        }
+      };
+      var trace4 = {
+        name: "CI_lower",
+        type: "scatter",
+        mode: "lines",
+        x: year_data_elid_1,
+        y: ci_low_data_elid_1,
+        line: {
+          color: "Grey",
+          width: 1,
+          dash: "dash"
+        }
+      };
+      data = [trace1, trace2, trace3, trace4];
+      var reference_shapes = [];
+      layout = {
+        xaxis: { title: ''},
+        yaxis: { title: 'Spawning Stock Biomass', rangemode: 'tozero'},
+        shapes: reference_shapes,
+        showlegend: true,
+        margin: { l: 60, b: 60, r: 60, t: 40 },
+        autosize: true
+      };
+      Plotly.newPlot("elid_1", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
+    };
+    getdata_elid_1();
+  </script>
+</div>
+
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+<br><h4 align="center">
+  Length Composition
+</h4>
+<div class="control-row">
+Year: <select id="elid_2-year"></select>
+</div>
+
+<div id="elid_2" style="height: 450px; width: 960px;" class="plotly-graph-div">
+  <script>
+    var year_data_elid_2 = [];
+    var size_data_elid_2 = [];
+    var actual_data_elid_2 = [];
+    var estimate_data_elid_2 = [];
+    var unique_year_elid_2 = [];
+    var unique_size_elid_2 = [];
+    var year_elid_2 = document.querySelector("#elid_2-year");
+    year_elid_2.addEventListener("change", updatePlot_elid_2, false);
+
+    function getdata_elid_2() {
+      Plotly.d3.csv("assets/data/MODEL_lcomp_est.csv", function(data){
+        processData_elid_2(data)
+      });
+    };
+    function processData_elid_2(allRows) {
+      year_data_elid_2 = [];
+      size_data_elid_2 = [];
+      actual_data_elid_2 = [];
+      estimate_data_elid_2 = [];
+      unique_size_elid_2 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        year_data_elid_2.push( row['year'] );
+        size_data_elid_2.push( row['size_class'] );
+        actual_data_elid_2.push( Number(row['actual']) );
+        estimate_data_elid_2.push( Number(row['estimate']) );
+      }
+      unique_year_elid_2 = getUniques(year_data_elid_2);
+      unique_size_elid_2 = getUniques(size_data_elid_2);
+      assignOptions(unique_year_elid_2, year_elid_2);
+      updatePlot_elid_2();  // Put it here to fix the asynchronous function issue
+    };
+
+    function updatePlot_elid_2(){
+      var data = [];
+      var current_year = year_elid_2.value;
+      var curr_actual = getFilteredArray(actual_data_elid_2, [year_data_elid_2], [current_year]);
+      var curr_estimate = getFilteredArray(estimate_data_elid_2, [year_data_elid_2], [current_year]);
+      var trace1 = {
+        name: "len_comp_actual",
+        type: "scatter",
+        mode: "lines",
+        fill: 'tozeroy',
+        x: unique_size_elid_2,
+        y: curr_actual,
+        line: {
+          color: "DarkSlateGrey",
+          width: 1
+        }
+      };
+      var trace2 = {
+        name: "len_comp_est",
+        type: "scatter",
+        mode: "makers+lines",
+        x: unique_size_elid_2,
+        y: curr_estimate,
+        line: {
+          color: "RoyalBlue",
+          width: 2
+        }
+      };
+      data = [trace1, trace2];
+      var reference_shapes = [];
+      layout = {
+        xaxis: { title: 'Size classes'},
+        yaxis: { title: 'Proportion', rangemode: 'tozero'},
+        shapes: reference_shapes,
+        showlegend: true,
+        margin: { l: 60, b: 60, r: 60, t: 40 },
+        autosize: true
+      };
+      Plotly.newPlot("elid_2", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
+    };
+    getdata_elid_2();
+  </script>
+</div>
+
+
+  </div>
+</body>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/js/bootstrap.min.js"></script>
+</html>
