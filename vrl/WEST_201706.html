@@ -1325,7 +1325,8 @@
       element: 'elid_1_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false,
+      datatables_options: {
+        "paging": false,
         "searching": false,
         "autoWidth": false,
         "order": [[ 3, "asc" ], [ 0, "asc" ]]
@@ -1438,7 +1439,8 @@
       element: 'elid_9_table',
       allow_download: false,
       csv_options: {separator: ',', delimiter: '"'},
-      datatables_options: {"paging": false,
+      datatables_options: {
+        "paging": false,
         "searching": false,
         "autoWidth": false,
         "order": [[ 1, "asc" ], [ 0, "asc" ]]
@@ -1448,76 +1450,52 @@
 </div>
 <p><br>Annual time series of standardised catch-per-unit effort (CPUE) (kg/potlift), plotted by region.<br></p>
 
-<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
-  <h3 class="hr-divider-content hr-divider-heading">
-    Relative Abundance of Recruits
-  </h3>
-</div>
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+<br><h4 align="center">
+  Relative Abundance of Recruits
+</h4>
 <div class="control-row">
 
 </div>
 <div id="elid_10" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
-    var year_data_elid_10 = [1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
-    var display_year_data_elid_10 = ['1978/79', '1979/80', '1980/81', '1981/82', '1982/83', '1983/84', '1984/85', '1985/86', '1986/87', '1987/88', '1988/89', '1989/90', '1990/91', '1991/92', '1992/93', '1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/00', '2000/01', '2001/02', '2002/03', '2003/04', '2004/05', '2005/06', '2006/07', '2007/08', '2008/09', '2009/10', '2010/11', '2011/12', '2012/13', '2013/14', '2014/15', '2015/16'];
-    var region_data_elid_10 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var fleet_data_elid_10 = ['Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot'];
-    var species_data_elid_10 = ['Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster'];
-    var sex_data_elid_10 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var subgroup_data_elid_10 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var value_data_elid_10 = [0.922409161, 0.924020736, 0.630908955, 0.833886092, 0.846814819, 0.617987971, 0.595615596, 0.781560878, 0.904261203, 1.67181854, 1.267519712, 0.929394802, 0.84222654, 1.384341466, 0.783547927, 0.998590586, 2.475980174, 1.146963852, 1.551008493, 0.88658033, 1.437178926, 0.921370476, 0.763269697, 0.531257118, 0.842965878, 0.862401547, 0.418353981, 0.571346493, 1.048831978, 1.215892545, 0.550552146, 0.838089864, 0.615566092, 0.583151375, 0.522946347, 0.608434648, 1.02030104, 1.02030104];
-    var error_data_elid_10 = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-    var unique_region_elid_10 = region_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_fleet_elid_10 = fleet_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_species_elid_10 = species_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_sex_elid_10 = sex_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_subgroup_elid_10 = subgroup_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var year_list_elid_10 = year_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var display_year_list_elid_10 = display_year_data_elid_10.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var current_display_year_elid_10 = display_year_list_elid_10[0];
-    var current_region_elid_10 = unique_region_elid_10[0];
-    var current_fleet_elid_10 = unique_fleet_elid_10[0];
-    var current_species_elid_10 = unique_species_elid_10[0];
-    var current_sex_elid_10 = unique_sex_elid_10[0];
-    var current_subgroup_elid_10 = unique_subgroup_elid_10[0];
-    var ref_value_elid_10 = "1.0"
-    if (unique_region_elid_10.length > 1) {
-      var region_elid_10 = document.querySelector("#elid_10-region");
-      assignOptions(unique_region_elid_10, region_elid_10);
-      region_elid_10.addEventListener("change", updatePlot_elid_10, false);
+    var display_year_data_elid_10 = [];
+    var region_data_elid_10 = [];
+    var value_data_elid_10 = [];
+    var display_year_list_elid_10 = [];
+    var unique_region_elid_10 = [];
+    var current_display_year_elid_10 = "";
+    var current_region_elid_10 = "";
+    var survey_id_elid_10 = "recruits";
+    var ref_value_elid_10 = "1.0";
+
+    function getdata_elid_10() {
+      Plotly.d3.csv("assets/data/WEST_201706_recruits.csv", function(data){
+        processData_elid_10(data)
+      });
     };
-    if (unique_fleet_elid_10.length > 1) {
-      var fleet_elid_10 = document.querySelector("#elid_10-fleet");
-      assignOptions(unique_fleet_elid_10, fleet_elid_10);
-      fleet_elid_10.addEventListener("change", updatePlot_elid_10, false);
-    };
-    if (unique_species_elid_10.length > 1) {
-      var species_elid_10 = document.querySelector("#elid_10-species");
-      assignOptions(unique_species_elid_10, species_elid_10);
-      species_elid_10.addEventListener("change", updatePlot_elid_10, false);
-    };
-    if (unique_sex_elid_10.length > 1) {
-      var sex_elid_10 = document.querySelector("#elid_10-sex");;
-      assignOptions(unique_sex_elid_10, sex_elid_10);
-      sex_elid_10.addEventListener("change", updatePlot_elid_10, false);
-    };
-    if (unique_subgroup_elid_10.length > 1) {
-      var subgroup_elid_10 = document.querySelector("#elid_10-subgroup");;
-      assignOptions(unique_subgroup_elid_10, subgroup_elid_10);
-      subgroup_elid_10.addEventListener("change", updatePlot_elid_10, false);
+    function processData_elid_10(allRows) {
+      display_year_data_elid_10 = [];
+      region_data_elid_10 = [];
+      value_data_elid_10 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        display_year_data_elid_10.push( row['display_year'] );
+        region_data_elid_10.push( row['region'] );
+        value_data_elid_10.push( Number(row['value']) );
+      }
+      display_year_list_elid_10 = getUniques(display_year_data_elid_10);
+      unique_region_elid_10 = getUniques(region_data_elid_10);
+      current_display_year_elid_10 = display_year_list_elid_10[0];
+      current_region_elid_10 = unique_region_elid_10[0];
+      updatePlot_elid_10();  // Put it here to fix the asynchronous function issue
     };
 
-    updatePlot_elid_10();
     function updatePlot_elid_10(){
-      if (typeof region_elid_10 != "undefined") { current_region_elid_10 = region_elid_10.value; }
-      if (typeof fleet_elid_10 != "undefined") { current_fleet_elid_10 = fleet_elid_10.value; }
-      if (typeof species_elid_10 != "undefined") { current_species_elid_10 = species_elid_10.value; }
-      if (typeof sex_elid_10 != "undefined") { current_sex_elid_10 = sex_elid_10.value; }
-      if (typeof subgroup_elid_10 != "undefined") { current_subgroup_elid_10 = subgroup_elid_10.value; }
       var data = [];
-      var curr_display_years = getFilteredArray(display_year_data_elid_10, [region_data_elid_10, fleet_data_elid_10, species_data_elid_10, sex_data_elid_10, subgroup_data_elid_10], [current_region_elid_10, current_fleet_elid_10, current_species_elid_10, current_sex_elid_10, current_subgroup_elid_10]);
-      var curr_values = getFilteredArray(value_data_elid_10, [region_data_elid_10, fleet_data_elid_10, species_data_elid_10, sex_data_elid_10, subgroup_data_elid_10], [current_region_elid_10, current_fleet_elid_10, current_species_elid_10, current_sex_elid_10, current_subgroup_elid_10]);
-      var curr_errors = getFilteredArray(error_data_elid_10, [region_data_elid_10, fleet_data_elid_10, species_data_elid_10, sex_data_elid_10, subgroup_data_elid_10], [current_region_elid_10, current_fleet_elid_10, current_species_elid_10, current_sex_elid_10, current_subgroup_elid_10]);
+      var curr_display_years = getFilteredArray(display_year_data_elid_10, [region_data_elid_10], [current_region_elid_10]);
+      var curr_values = getFilteredArray(value_data_elid_10, [region_data_elid_10], [current_region_elid_10]);
+      var curr_errors = [];
       var trace = {
         type: "scatter",
         mode: "lines",
@@ -1547,100 +1525,102 @@
         }
         reference_shapes = [{
           type: 'line',
-      xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
-      yref: 'y',  // y-reference is assigned to the y-values
-      x0: 0,
-      y0: curr_ref,
-      x1: 1,
-      y1: curr_ref,
-      line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
-    }];
-  }
-  layout = {
-    xaxis: { title: ''},
-    yaxis: { title: 'Relative abundance of recruits', rangemode: 'tozero'},
-    shapes: reference_shapes,
-    showlegend: false,
-    margin: { l: 60, b: 60, r: 60, t: 40 },
-    autosize: true
-  };
-  Plotly.newPlot("elid_10", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
-};
-</script>
-
+          xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
+          yref: 'y',  // y-reference is assigned to the y-values
+          x0: 0,
+          y0: curr_ref,
+          x1: 1,
+          y1: curr_ref,
+          line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
+        }];
+      }
+      layout = {
+        xaxis: { title: ''},
+        yaxis: { title: 'Relative abundance of recruits', rangemode: 'tozero'},
+        shapes: reference_shapes,
+        showlegend: false,
+        margin: { l: 60, b: 60, r: 60, t: 40 },
+        autosize: true
+      };
+      Plotly.newPlot("elid_10", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
+    };
+    getdata_elid_10();
+  </script>
+</div>
+<br>
+<button onclick="elid_10_table_display()">Show/Hide Data</button>
+<div id="elid_10_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_10_table_display() {
+        var x = document.getElementById('elid_10_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/WEST_201706_recruits.csv',
+      element: 'elid_10_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
 </div>
 <p><br>Relative abundance of recruits (<60mm), as estimated by the rock lobster model, from 1978/79 to present.<br></p>
 
-<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
-  <h3 class="hr-divider-content hr-divider-heading">
-    Modelled Egg Production
-  </h3>
-</div>
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+<br><h4 align="center">
+  Modelled Egg Production
+</h4>
 <div class="control-row">
 
 </div>
 <div id="elid_11" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
-    var year_data_elid_11 = [1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
-    var display_year_data_elid_11 = ['1978/79', '1979/80', '1980/81', '1981/82', '1982/83', '1983/84', '1984/85', '1985/86', '1986/87', '1987/88', '1988/89', '1989/90', '1990/91', '1991/92', '1992/93', '1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/00', '2000/01', '2001/02', '2002/03', '2003/04', '2004/05', '2005/06', '2006/07', '2007/08', '2008/09', '2009/10', '2010/11', '2011/12', '2012/13', '2013/14', '2014/15', '2015/16'];
-    var region_data_elid_11 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var fleet_data_elid_11 = ['Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot'];
-    var species_data_elid_11 = ['Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster'];
-    var sex_data_elid_11 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var subgroup_data_elid_11 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var value_data_elid_11 = [73.19647738, 71.50737169, 70.70542128, 66.80155855, 63.47780997, 59.88819946, 56.19307915, 52.36246603, 49.77861443, 46.47061642, 43.24953116, 42.68573687, 43.54879188, 46.48522839, 47.77127145, 49.06073029, 49.10380713, 48.51382515, 48.89715214, 51.75920044, 54.48613547, 56.59177716, 57.86093106, 57.14285714, 56.61872391, 54.54932749, 50.43216797, 46.4607486, 42.79010808, 38.92192132, 36.08795836, 36.21586053, 37.69072059, 39.46920599, 41.38432278, 42.02440294, 41.65151307, 41.57408861];
-    var error_data_elid_11 = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-    var unique_region_elid_11 = region_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_fleet_elid_11 = fleet_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_species_elid_11 = species_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_sex_elid_11 = sex_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_subgroup_elid_11 = subgroup_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var year_list_elid_11 = year_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var display_year_list_elid_11 = display_year_data_elid_11.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var current_display_year_elid_11 = display_year_list_elid_11[0];
-    var current_region_elid_11 = unique_region_elid_11[0];
-    var current_fleet_elid_11 = unique_fleet_elid_11[0];
-    var current_species_elid_11 = unique_species_elid_11[0];
-    var current_sex_elid_11 = unique_sex_elid_11[0];
-    var current_subgroup_elid_11 = unique_subgroup_elid_11[0];
-    var ref_value_elid_11 = "20.0"
-    if (unique_region_elid_11.length > 1) {
-      var region_elid_11 = document.querySelector("#elid_11-region");
-      assignOptions(unique_region_elid_11, region_elid_11);
-      region_elid_11.addEventListener("change", updatePlot_elid_11, false);
+    var display_year_data_elid_11 = [];
+    var region_data_elid_11 = [];
+    var value_data_elid_11 = [];
+    var display_year_list_elid_11 = [];
+    var unique_region_elid_11 = [];
+    var current_display_year_elid_11 = "";
+    var current_region_elid_11 = "";
+    var survey_id_elid_11 = "egg_prod";
+    var ref_value_elid_11 = "20.0";
+
+    function getdata_elid_11() {
+      Plotly.d3.csv("assets/data/WEST_201706_egg_prod.csv", function(data){
+        processData_elid_11(data)
+      });
     };
-    if (unique_fleet_elid_11.length > 1) {
-      var fleet_elid_11 = document.querySelector("#elid_11-fleet");
-      assignOptions(unique_fleet_elid_11, fleet_elid_11);
-      fleet_elid_11.addEventListener("change", updatePlot_elid_11, false);
-    };
-    if (unique_species_elid_11.length > 1) {
-      var species_elid_11 = document.querySelector("#elid_11-species");
-      assignOptions(unique_species_elid_11, species_elid_11);
-      species_elid_11.addEventListener("change", updatePlot_elid_11, false);
-    };
-    if (unique_sex_elid_11.length > 1) {
-      var sex_elid_11 = document.querySelector("#elid_11-sex");;
-      assignOptions(unique_sex_elid_11, sex_elid_11);
-      sex_elid_11.addEventListener("change", updatePlot_elid_11, false);
-    };
-    if (unique_subgroup_elid_11.length > 1) {
-      var subgroup_elid_11 = document.querySelector("#elid_11-subgroup");;
-      assignOptions(unique_subgroup_elid_11, subgroup_elid_11);
-      subgroup_elid_11.addEventListener("change", updatePlot_elid_11, false);
+    function processData_elid_11(allRows) {
+      display_year_data_elid_11 = [];
+      region_data_elid_11 = [];
+      value_data_elid_11 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        display_year_data_elid_11.push( row['display_year'] );
+        region_data_elid_11.push( row['region'] );
+        value_data_elid_11.push( Number(row['value']) );
+      }
+      display_year_list_elid_11 = getUniques(display_year_data_elid_11);
+      unique_region_elid_11 = getUniques(region_data_elid_11);
+      current_display_year_elid_11 = display_year_list_elid_11[0];
+      current_region_elid_11 = unique_region_elid_11[0];
+      updatePlot_elid_11();  // Put it here to fix the asynchronous function issue
     };
 
-    updatePlot_elid_11();
     function updatePlot_elid_11(){
-      if (typeof region_elid_11 != "undefined") { current_region_elid_11 = region_elid_11.value; }
-      if (typeof fleet_elid_11 != "undefined") { current_fleet_elid_11 = fleet_elid_11.value; }
-      if (typeof species_elid_11 != "undefined") { current_species_elid_11 = species_elid_11.value; }
-      if (typeof sex_elid_11 != "undefined") { current_sex_elid_11 = sex_elid_11.value; }
-      if (typeof subgroup_elid_11 != "undefined") { current_subgroup_elid_11 = subgroup_elid_11.value; }
       var data = [];
-      var curr_display_years = getFilteredArray(display_year_data_elid_11, [region_data_elid_11, fleet_data_elid_11, species_data_elid_11, sex_data_elid_11, subgroup_data_elid_11], [current_region_elid_11, current_fleet_elid_11, current_species_elid_11, current_sex_elid_11, current_subgroup_elid_11]);
-      var curr_values = getFilteredArray(value_data_elid_11, [region_data_elid_11, fleet_data_elid_11, species_data_elid_11, sex_data_elid_11, subgroup_data_elid_11], [current_region_elid_11, current_fleet_elid_11, current_species_elid_11, current_sex_elid_11, current_subgroup_elid_11]);
-      var curr_errors = getFilteredArray(error_data_elid_11, [region_data_elid_11, fleet_data_elid_11, species_data_elid_11, sex_data_elid_11, subgroup_data_elid_11], [current_region_elid_11, current_fleet_elid_11, current_species_elid_11, current_sex_elid_11, current_subgroup_elid_11]);
+      var curr_display_years = getFilteredArray(display_year_data_elid_11, [region_data_elid_11], [current_region_elid_11]);
+      var curr_values = getFilteredArray(value_data_elid_11, [region_data_elid_11], [current_region_elid_11]);
+      var curr_errors = [];
       var trace = {
         type: "scatter",
         mode: "lines",
@@ -1670,66 +1650,104 @@
         }
         reference_shapes = [{
           type: 'line',
-      xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
-      yref: 'y',  // y-reference is assigned to the y-values
-      x0: 0,
-      y0: curr_ref,
-      x1: 1,
-      y1: curr_ref,
-      line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
-    }];
-  }
-  layout = {
-    xaxis: { title: ''},
-    yaxis: { title: 'Modelled egg production', rangemode: 'tozero'},
-    shapes: reference_shapes,
-    showlegend: false,
-    margin: { l: 60, b: 60, r: 60, t: 40 },
-    autosize: true
-  };
-  Plotly.newPlot("elid_11", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
-};
-</script>
-
+          xref: 'paper',  // x-reference is assigned to the plot paper [0,1]
+          yref: 'y',  // y-reference is assigned to the y-values
+          x0: 0,
+          y0: curr_ref,
+          x1: 1,
+          y1: curr_ref,
+          line: { color: 'DarkSlateGrey', width: 2, dash: 'dash'}
+        }];
+      }
+      layout = {
+        xaxis: { title: ''},
+        yaxis: { title: 'Modelled egg production', rangemode: 'tozero'},
+        shapes: reference_shapes,
+        showlegend: false,
+        margin: { l: 60, b: 60, r: 60, t: 40 },
+        autosize: true
+      };
+      Plotly.newPlot("elid_11", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
+    };
+    getdata_elid_11();
+  </script>
+</div>
+<br>
+<button onclick="elid_11_table_display()">Show/Hide Data</button>
+<div id="elid_11_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_11_table_display() {
+        var x = document.getElementById('elid_11_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/WEST_201706_egg_prod.csv',
+      element: 'elid_11_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
 </div>
 <p><br>Model estimated Rock lobster egg production, as percentage of the estimated 1951 level. Dashed line is the limit reference point from the Harvest strategy.<br></p>
 
-<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html">
-  <h3 class="hr-divider-content hr-divider-heading">
-    Estimated Biomass & Exploitation
-  </h3>
-</div>
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+<br><h4 align="center">
+  Estimated Biomass & Exploitation
+</h4>
 <div class="control-row">
 
 </div>
 <div id="elid_12" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
-    var year_data_elid_12 = [1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015];
-    var display_year_data_elid_12 = ['1978/79', '1979/80', '1980/81', '1981/82', '1982/83', '1983/84', '1984/85', '1985/86', '1986/87', '1987/88', '1988/89', '1989/90', '1990/91', '1991/92', '1992/93', '1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/00', '2000/01', '2001/02', '2002/03', '2003/04', '2004/05', '2005/06', '2006/07', '2007/08', '2008/09', '2009/10', '2010/11', '2011/12', '2012/13', '2013/14', '2014/15', '2015/16'];
-    var region_data_elid_12 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var fleet_data_elid_12 = ['Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot', 'Pot'];
-    var species_data_elid_12 = ['Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster', 'Lobster'];
-    var sex_data_elid_12 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var subgroup_data_elid_12 = ['All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All', 'All'];
-    var biomass_data_elid_12 = [1424970.0, 1392530.0, 1336020.0, 1273390.0, 1205130.0, 1124310.0, 1047600.0, 993790.0, 942817.0, 862244.0, 807400.0, 762149.0, 790338.0, 842862.0, 867770.0, 829749.0, 779519.0, 762032.0, 740952.0, 754778.0, 821720.0, 843128.0, 810154.0, 823092.0, 854218.0, 831785.0, 669634.0, 569230.0, 513121.0, 461112.0, 445131.0, 463272.0, 521705.0, 590183.0, 628877.0, 648968.0, 668347.0, 675255.0];
-    var exploitation_data_elid_12 = [0.340724, 0.325115, 0.41082, 0.391595, 0.382111, 0.374045, 0.387366, 0.347145, 0.372493, 0.400482, 0.376228, 0.434864, 0.400559, 0.484605, 0.470024, 0.540197, 0.558096, 0.554612, 0.542578, 0.617543, 0.627687, 0.617728, 0.647912, 0.532298, 0.503024, 0.55374, 0.609385, 0.628398, 0.654671, 0.625958, 0.528179, 0.515591, 0.487565, 0.394054, 0.411344, 0.413916, 0.33542, 0.335069];
-    var error_data_elid_12 = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-    var unique_region_elid_12 = region_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_fleet_elid_12 = fleet_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_species_elid_12 = species_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_sex_elid_12 = sex_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var unique_subgroup_elid_12 = subgroup_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var year_list_elid_12 = year_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var display_year_list_elid_12 = display_year_data_elid_12.filter(function(item, i, ar){return ar.indexOf(item) === i;});
-    var current_display_year_elid_12 = display_year_list_elid_12[0];
-    var current_region_elid_12 = unique_region_elid_12[0];
-    var current_fleet_elid_12 = unique_fleet_elid_12[0];
-    var current_species_elid_12 = unique_species_elid_12[0];
-    var current_sex_elid_12 = unique_sex_elid_12[0];
-    var current_subgroup_elid_12 = unique_subgroup_elid_12[0];
-    var ref_value_elid_12 = "0.0"
+    var display_year_data_elid_12 = [];
+    var region_data_elid_12 = [];
+    var biomass_data_elid_12 = [];
+    var exploitation_data_elid_12 = [];
+    var display_year_list_elid_12 = [];
+    var unique_region_elid_12 = [];
+    var current_display_year_elid_12 = "";
+    var current_region_elid_12 = "";
+    var biomass_id_elid_12 = "biomass";
+    var exploitation_id_elid_12 = "exploitation";
 
-    updatePlot_elid_12();
+    function getdata_elid_12() {
+      Plotly.d3.csv("assets/data/WEST_201706_biomass_ex.csv", function(data){
+        processData_elid_12(data)
+      });
+    };
+    function processData_elid_12(allRows) {
+      display_year_data_elid_12 = [];
+      region_data_elid_12 = [];
+      biomass_data_elid_12 = [];
+      exploitation_data_elid_12 = [];
+      for (var i=0; i<allRows.length; i++) {
+        row = allRows[i];
+        if (row['survey_id'] == biomass_id_elid_12) {
+          display_year_data_elid_12.push( row['display_year'] );
+          region_data_elid_12.push( row['region'] );
+          biomass_data_elid_12.push( Number(row['value']) );
+        }
+        if (row['survey_id'] == exploitation_id_elid_12) {
+          display_year_data_elid_12.push( row['display_year'] );
+          region_data_elid_12.push( row['region'] );
+          exploitation_data_elid_12.push( Number(row['value']) );
+        }
+      }
+      display_year_list_elid_12 = getUniques(display_year_data_elid_12);
+      unique_region_elid_12 = getUniques(region_data_elid_12);
+      updatePlot_elid_12();  // Put it here to fix the asynchronous function issue
+    };
+
     function updatePlot_elid_12(){
       var data = [];
       var curr_display_years = display_year_data_elid_12;
@@ -1776,8 +1794,34 @@
       };
       Plotly.newPlot("elid_12", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
     };
+    getdata_elid_12();
   </script>
-
+</div>
+<br>
+<button onclick="elid_12_table_display()">Show/Hide Data</button>
+<div id="elid_12_table" style="width: 960px; display: none" >
+  <script type="text/javascript">
+    function elid_12_table_display() {
+        var x = document.getElementById('elid_12_table');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/WEST_201706_biomass_ex.csv',
+      element: 'elid_12_table',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 1, "asc" ], [ 0, "asc" ]]
+      }
+    });
+  </script>
 </div>
 <p><br>Model estimated available biomass and proportional exploitation in the Rock lobster fishery from 1978/79 to present.<br></p>
 
