@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>
-    VFA: Rock Lobster West
+    Length-Based Assesment Model: Demo
   </title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -161,47 +161,81 @@
   Length Composition
 </h4>
 <div class="control-row">
-Year: <select id="elid_2-year"></select>
+<!-- Year: <select id="elid_2-year"></select> -->
 </div>
+<div id="elid_2a" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2b" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2c" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2d" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2e" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2f" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2g" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2h" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2i" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2j" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2k" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2l" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2m" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2n" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2o" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2p" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<div id="elid_2q" style="height: 320px; width: 960px;" class="plotly-graph-div">
+</div>
+<script>
+  var year_data_elid_2 = [];
+  var size_data_elid_2 = [];
+  var actual_data_elid_2 = [];
+  var estimate_data_elid_2 = [];
+  var unique_year_elid_2 = [];
+  var unique_size_elid_2 = [];
+  // var year_elid_2 = document.querySelector("#elid_2-year");
+  // year_elid_2.addEventListener("change", updatePlot_elid_2, false);
 
-<div id="elid_2" style="height: 450px; width: 960px;" class="plotly-graph-div">
-  <script>
-    var year_data_elid_2 = [];
-    var size_data_elid_2 = [];
-    var actual_data_elid_2 = [];
-    var estimate_data_elid_2 = [];
-    var unique_year_elid_2 = [];
-    var unique_size_elid_2 = [];
-    var year_elid_2 = document.querySelector("#elid_2-year");
-    year_elid_2.addEventListener("change", updatePlot_elid_2, false);
+  function getdata_elid_2() {
+    Plotly.d3.csv("assets/data/MODEL_lcomp_est.csv", function(data){
+      processData_elid_2(data)
+    });
+  };
+  function processData_elid_2(allRows) {
+    year_data_elid_2 = [];
+    size_data_elid_2 = [];
+    actual_data_elid_2 = [];
+    estimate_data_elid_2 = [];
+    unique_size_elid_2 = [];
+    for (var i=0; i<allRows.length; i++) {
+      row = allRows[i];
+      year_data_elid_2.push( row['year'] );
+      size_data_elid_2.push( row['size_class'] );
+      actual_data_elid_2.push( Number(row['actual']) );
+      estimate_data_elid_2.push( Number(row['estimate']) );
+    }
+    unique_year_elid_2 = getUniques(year_data_elid_2);
+    unique_size_elid_2 = getUniques(size_data_elid_2);
+    // assignOptions(unique_year_elid_2, year_elid_2);
+    updatePlot_elid_2();  // Put it here to fix the asynchronous function issue
+  };
 
-    function getdata_elid_2() {
-      Plotly.d3.csv("assets/data/MODEL_lcomp_est.csv", function(data){
-        processData_elid_2(data)
-      });
-    };
-    function processData_elid_2(allRows) {
-      year_data_elid_2 = [];
-      size_data_elid_2 = [];
-      actual_data_elid_2 = [];
-      estimate_data_elid_2 = [];
-      unique_size_elid_2 = [];
-      for (var i=0; i<allRows.length; i++) {
-        row = allRows[i];
-        year_data_elid_2.push( row['year'] );
-        size_data_elid_2.push( row['size_class'] );
-        actual_data_elid_2.push( Number(row['actual']) );
-        estimate_data_elid_2.push( Number(row['estimate']) );
-      }
-      unique_year_elid_2 = getUniques(year_data_elid_2);
-      unique_size_elid_2 = getUniques(size_data_elid_2);
-      assignOptions(unique_year_elid_2, year_elid_2);
-      updatePlot_elid_2();  // Put it here to fix the asynchronous function issue
-    };
-
-    function updatePlot_elid_2(){
+  function updatePlot_elid_2(){
+    var history_plots = ["elid_2a", "elid_2b", "elid_2c", "elid_2d", "elid_2e", "elid_2f", "elid_2g", "elid_2h", "elid_2i", "elid_2j", "elid_2k", "elid_2l", "elid_2m", "elid_2n", "elid_2o", "elid_2p", "elid_2q"];
+    for (var j = 0 ; j < unique_year_elid_2.length ; j++){
       var data = [];
-      var current_year = year_elid_2.value;
+      var current_year = unique_year_elid_2[j];
       var curr_actual = getFilteredArray(actual_data_elid_2, [year_data_elid_2], [current_year]);
       var curr_estimate = getFilteredArray(estimate_data_elid_2, [year_data_elid_2], [current_year]);
       var trace1 = {
@@ -230,19 +264,18 @@ Year: <select id="elid_2-year"></select>
       data = [trace1, trace2];
       var reference_shapes = [];
       layout = {
-        xaxis: { title: 'Size classes'},
+        xaxis: { title: 'Size classes ' + current_year},
         yaxis: { title: 'Proportion', rangemode: 'tozero'},
         shapes: reference_shapes,
         showlegend: true,
         margin: { l: 60, b: 60, r: 60, t: 40 },
         autosize: true
       };
-      Plotly.newPlot("elid_2", data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
-    };
-    getdata_elid_2();
-  </script>
-</div>
-
+      Plotly.newPlot(history_plots[j], data, layout, {modeBarButtonsToRemove: ["sendDataToCloud"], displaylogo: false});
+    }
+  };
+  getdata_elid_2();
+</script>
 
   </div>
 </body>
