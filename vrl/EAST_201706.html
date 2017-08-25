@@ -16,6 +16,7 @@
   <!-- Extra style sheets -->
   <link href="assets/css/toolkit-light.css" rel="stylesheet">
   <link href="assets/css/application.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- extra assets (css, img) links -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
@@ -64,13 +65,12 @@
     </div>
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="annual">
-        <br>
-        <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+
         <br><h4 align="center">
-          Commercial Catch by Zone
+          <strong>1.1 Commercial Catch by Zone</strong>
         </h4>
         <div class="control-row">
-          Plot variable: <select id="map-pane-selector"></select> </br></br>
+          <p>Plot variable: <select id="map-pane-selector"></select> </br></br></p>
         </div>
         <!-- <div id="elid_0" style="height: 450px; width: 960px;" class="plotly-graph-div"> -->
           <div id="map-pane" style="height: 450px; width: 960px;"></div>
@@ -219,7 +219,7 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Commercial Catch History
+  <strong>1.2 Commercial Catch History</strong>
 </h4>
 <div id="elid_2" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
@@ -279,20 +279,20 @@
         };
         data.push(trace);
       };
-      // add a trace for TAC data
-     var trace = {
-        type: "scatter",
-        mode: "lines",
-        name: "TAC",
-        x: display_year_tac_data_elid_2,
-        y: tac_data_elid_2,
-        line: {
-          shape: 'hvh',
-          color: "DarkCrimson",
-          width: 2
-        },
-      };
-      data.push(trace);
+     //  // add a trace for TAC data
+     // var trace = {
+     //    type: "scatter",
+     //    mode: "lines",
+     //    name: "TAC",
+     //    x: display_year_tac_data_elid_2,
+     //    y: tac_data_elid_2,
+     //    line: {
+     //      shape: 'hvh',
+     //      color: "DarkCrimson",
+     //      width: 2
+     //    },
+     //  };
+     //  data.push(trace);
       layout = {
         barmode: "stack",
         xaxis: {
@@ -336,11 +336,11 @@
     });
   </script>
 </div>
-<p><br>Total annual catch (kg) in the Rock Lobster Eastern Zone fishery from 1978/79 to present, displayed by financial year. Horizontal line indicates the Total Allowable Catch (TAC) between 2009/10 and present. TAC was introduced to the fishery in 2001/02, but for the first eight years was based on fishing season (Nov-Sept) and not financial year.<br></p>
+<p><br>Total annual catch (kg) in the Rock Lobster Eastern Zone fishery from 1978/79 to present, displayed by fishing year. TAC was introduced to the fishery in 2001/02.<br></p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Historical TAC Data
+  <strong>1.3 Historical TAC Data</strong>
 </h4>
 <div id="table_TAC" style="width: 960px;">
   <script type="text/javascript">
@@ -361,10 +361,10 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Annual Catch / Effort Data
+  <strong>1.4 Annual Catch / Effort Data</strong>
 </h4>
 <div class="control-row">
-  Region: <select id="elid_3-region"></select>
+  <p>Region: <select id="elid_3-region"></select></p>
 </div>
 <div id="elid_3" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
@@ -498,10 +498,10 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Length Frequency Distribution
+  <strong>1.5 Length Frequency Distribution</strong>
 </h4>
 <div class="control-row">
-  Year: <select id="elid_5-display-year"></select> Survey: <select id="elid_5-survey"></select> Sex: <select id="elid_5-sex"></select>
+  <p>Year: <select id="elid_5-display-year"></select> Survey: <select id="elid_5-survey"></select> Sex: <select id="elid_5-sex"></select></p>
 </div>
 <div id="elid_5" style="height: 320px; width: 960px;" class="plotly-graph-div">
 </div>
@@ -695,7 +695,7 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Average Weight
+  <strong>1.6 Average Weight</strong>
 </h4>
 <div class="control-row">
 
@@ -773,7 +773,7 @@
       }];
       layout = {
         xaxis: { title: ''},
-        yaxis: { title: 'Average lobster weight (kg)', rangemode: 'tozero'},
+        yaxis: { title: 'Average lobster weight (kg)', rangemode: 'tozero', range: [0, (curr_ref * 2)]},
         shapes: reference_shapes,
         showlegend: true,
         margin: { l: 60, b: 60, r: 60, t: 40 },
@@ -814,10 +814,10 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Fixed Site Survey
+  <strong>1.7 Fixed Site Survey</strong>
 </h4>
 <div class="control-row">
-  Subgroup: <select id="elid_7-subgroup"></select>
+  <p>Subgroup: <select id="elid_7-subgroup"></select></p>
 </div>
 <div id="elid_7" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
@@ -957,10 +957,10 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Observer Survey
+  <strong>1.8 Observer Survey</strong>
 </h4>
 <div class="control-row">
-  Subgroup: <select id="elid_8-subgroup"></select>
+  <p>Subgroup: <select id="elid_8-subgroup"></select></p>
 </div>
 <div id="elid_8" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
@@ -1096,12 +1096,34 @@
 </div>
 <div role="tabpanel" class="tab-pane" id="monthly">
 
+<br><h4 align="center">
+  <strong>2.1 Current Season Data</strong>
+</h4>
+<div id="table_monthly_highlight" style="width: 960px;">
+  <script type="text/javascript">
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_monthly_highlight.csv',
+      element: 'table_monthly_highlight',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 0, "asc" ]]
+      }
+    });
+  </script>
+</div>
+<br>
+<p>TACC, landed catch and uncaught quota for current quota season (Jul-Jun). Data derived from the phone-based Quota Monitoring System.</p>
+
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Monthly Data Trends
+  <strong>2.2 Monthly Data Trends</strong>
 </h4>
 <div class="control-row">
-  Plot variable: <select id="elid_1-survey"></select>
+  <p>Plot variable: <select id="elid_1-survey"></select></p>
 </div>
 <div id="elid_1" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
@@ -1235,12 +1257,57 @@
 </div>
 <p><br>Monthly update of key fishery statistics for the current and previous quota season (Jun-July). Selectable as monthly catch, cumulative catch, or monthly CPUE. Data presented is for the whole fishery. TAC for current year is indicated by a dashed grey line.<br></p>
 
+<div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
+<br><h4 align="center">
+  <strong>2.3 Monthly Landed Catch</strong>
+</h4>
+<div id="table_monthly_landed" style="width: 960px;">
+  <script type="text/javascript">
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_monthly_landed.csv',
+      element: 'table_monthly_landed',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 0, "asc" ]]
+      }
+    });
+  </script>
 </div>
-<div role="tabpanel" class="tab-pane" id="models">
+<br>
+<p>Monthly landed catch. Data derived from the phone-based Quota Monitoring System.</p>
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Standardised CPUE
+  <strong>2.4 Monthly Catch Rates</strong>
+</h4>
+<div id="table_monthly_catch_rate" style="width: 960px;">
+  <script type="text/javascript">
+    CsvToHtmlTable.init({
+      csv_path: 'assets/data/EAST_201706_monthly_catch_rate.csv',
+      element: 'table_monthly_catch_rate',
+      allow_download: false,
+      csv_options: {separator: ',', delimiter: '"'},
+      datatables_options: {
+        "paging": false,
+        "searching": false,
+        "autoWidth": false,
+        "order": [[ 0, "asc" ]]
+      }
+    });
+  </script>
+</div>
+<br>
+<p>Monthly average catch rates. Data derived from the phone-based Quota Monitoring System.</p>
+
+</div>
+<div role="tabpanel" class="tab-pane" id="models">
+
+<br><h4 align="center">
+  <strong>3.1 Standardised CPUE</strong>
 </h4>
 <div id="elid_9" style="height: 450px; width: 960px;" class="plotly-graph-div">
   <script>
@@ -1351,7 +1418,7 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Relative Abundance of Recruits
+  <strong>3.2 Relative Abundance of Recruits</strong>
 </h4>
 <div class="control-row">
 
@@ -1476,7 +1543,7 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Modelled Egg Production
+  <strong>3.3 Modelled Egg Production</strong>
 </h4>
 <div class="control-row">
 
@@ -1601,7 +1668,7 @@
 
 <div class="hr-divider" style="margin-top: 60px" xmlns="http://www.w3.org/1999/html"></div>
 <br><h4 align="center">
-  Estimated Biomass & Exploitation
+  <strong>3.4 Estimated Biomass & Exploitation</strong>
 </h4>
 <div class="control-row">
 

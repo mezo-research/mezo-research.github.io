@@ -1,4 +1,7 @@
 display_year,month_seq,month,survey_id,region,value
+2017/18,1,Jul,Catch,All,5871
+2017/18,1,Jul,Catch (cum),All,5871
+2017/18,1,Jul,CPUE,All,0.43
 2016/17,1,Jul,Catch,All,4783
 2016/17,2,Aug,Catch,All,7023
 2016/17,3,Sep,Catch,All,4042
@@ -67,4 +70,4 @@ display_year,month_seq,month,survey_id,region,value
 2015/16,9,Mar,CPUE,All,0.49
 2015/16,10,Apr,CPUE,All,0.49
 2015/16,11,May,CPUE,All,0.26
-2015/16,11,Jun,CPUE,All,0.16
+2015/16,12,Jun,CPUE,All,0.16

@@ -1,4 +1,7 @@
 display_year,month_seq,month,survey_id,region,value
+2017/18,1,Jul,Catch,All,9566
+2017/18,1,Jul,Catch (cum),All,9566
+2017/18,1,Jul,CPUE,All,0.4
 2016/17,1,Jul,Catch,All,6435
 2016/17,2,Aug,Catch,All,25889
 2016/17,3,Sep,Catch,All,10912
