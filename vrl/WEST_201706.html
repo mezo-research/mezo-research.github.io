@@ -628,6 +628,7 @@
     var current_display_year_elid_5 = "";
     var current_survey_elid_5 = "";
     var current_sex_elid_5 = "";
+    var max_freq_elid_5 = 100;
     var display_year_elid_5 = document.querySelector("#elid_5-display-year");
     display_year_elid_5.addEventListener("change", updatePlot_elid_5, false);
     var sex_elid_5 = document.querySelector("#elid_5-sex");;
@@ -724,7 +725,7 @@
         reference_shapes = get_ref_elid5(current_sex_elid_5);
         layout = {
           xaxis: { title: 'Length (mm) ' + current_display_year_elid_5, showgrid: false },
-          yaxis: { title: 'Lobsters / 1000 potlifts', range: [0, 65], showgrid: false },
+          yaxis: { title: 'Lobsters / 1000 potlifts', range: [0, max_freq_elid_5], showgrid: false },
           shapes: reference_shapes,
           margin: { l: 60, b: 60, r: 60, t: 40 }
         };
@@ -758,7 +759,7 @@
       reference_shapes = get_ref_elid5(current_sex_elid_5);
       layout = {
         xaxis: { title: 'Length (mm) ' + current_display_year_elid_5, showgrid: false },
-        yaxis: { title: 'Lobsters / 1000 potlifts', range: [0, 65], showgrid: false },
+        yaxis: { title: 'Lobsters / 1000 potlifts', range: [0, max_freq_elid_5], showgrid: false },
         shapes: reference_shapes,
         margin: { l: 60, b: 60, r: 60, t: 40 }
       };
